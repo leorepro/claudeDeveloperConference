@@ -9,3 +9,34 @@ function setLang(l){
   try{localStorage.setItem('forumLang',l);}catch(e){}
 }
 (function(){let l='zh';try{l=localStorage.getItem('forumLang')||'zh';}catch(e){}setLang(l);})();
+
+// 圖片輪播：左右按鈕、圓點、自動播放（滑鼠移入暫停）。
+function initCarousel(id){
+  const root=document.getElementById(id); if(!root) return;
+  const track=root.querySelector('.carousel-track');
+  const slides=[...root.querySelectorAll('.carousel-slide')];
+  const dotsWrap=root.querySelector('.carousel-dots');
+  const count=root.querySelector('.carousel-count');
+  if(!track||!slides.length) return;
+  let idx=0, timer=null;
+  slides.forEach((_,i)=>{const b=document.createElement('button'); b.setAttribute('aria-label','第 '+(i+1)+' 張'); b.addEventListener('click',()=>{go(i);restart();}); dotsWrap.appendChild(b);});
+  const dots=[...dotsWrap.children];
+  function go(i){
+    idx=(i+slides.length)%slides.length;
+    track.style.transform='translateX(-'+(idx*100)+'%)';
+    dots.forEach((d,j)=>d.classList.toggle('active',j===idx));
+    if(count) count.textContent=(idx+1)+' / '+slides.length;
+  }
+  function restart(){clearInterval(timer); timer=setInterval(()=>go(idx+1),5000);}
+  const next=root.querySelector('.carousel-btn.next'), prev=root.querySelector('.carousel-btn.prev');
+  if(next) next.addEventListener('click',()=>{go(idx+1);restart();});
+  if(prev) prev.addEventListener('click',()=>{go(idx-1);restart();});
+  root.addEventListener('mouseenter',()=>clearInterval(timer));
+  root.addEventListener('mouseleave',restart);
+  // 觸控滑動
+  let x0=null;
+  root.addEventListener('touchstart',e=>{x0=e.touches[0].clientX;},{passive:true});
+  root.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(idx+(dx<0?1:-1));restart();}x0=null;},{passive:true});
+  go(0); restart();
+}
+initCarousel('hallCarousel');
