@@ -175,6 +175,19 @@ tfoot td{font-weight:800;background:#F6ECDA;border-top:2px solid var(--clay)}
 .grid-table th.rest-h small{color:rgba(255,255,255,.5)}
 .grid-table tr.rnd td.rest{background:#F4ECDD;color:var(--ink-soft);font-style:italic;font-size:12px}
 .grid-table tfoot td{background:#F6ECDA;text-align:center}
+/* 表頭人數上限獨立列 */
+.grid-table thead tr:first-child th{padding-bottom:5px}
+.grid-table thead .cap-row th{padding-top:2px;padding-bottom:12px;font-size:11px;font-weight:600;
+  color:#C9BCA8;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.grid-table thead .cap-row th.rest-h{color:rgba(255,255,255,.5)}
+.grid-table thead .cap-label{font-weight:700;color:#F4C9A8;text-transform:uppercase;letter-spacing:.05em}
+/* 時間欄水平捲動時固定（桌機與手機皆同） */
+.grid-table thead th:first-child,
+.grid-table td.tcell,
+.grid-table tfoot td:first-child{position:sticky;left:0;box-shadow:6px 0 8px -6px rgba(60,40,20,.32)}
+.grid-table td.tcell,.grid-table tfoot td:first-child{z-index:2}
+.grid-table thead th:first-child{z-index:3;box-shadow:6px 0 8px -6px rgba(0,0,0,.4)}
+.grid-table tfoot td:first-child{background:#F6ECDA;text-align:left}
 
 .pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px}
 .pill.main{background:#FCE3D8;color:var(--accent-dark)}
@@ -215,7 +228,7 @@ html[lang="en"] .tl-title{white-space:normal}
 .tl-today-flag:hover{transform:translateX(-50%) scale(1.07)}
 @keyframes tlPulse{0%{box-shadow:0 0 0 0 rgba(217,119,87,.5)}70%{box-shadow:0 0 0 9px rgba(217,119,87,0)}100%{box-shadow:0 0 0 0 rgba(217,119,87,0)}}
 @media(prefers-reduced-motion:reduce){.tl-today-dot{animation:none}.tl-today{transition:none}}
-@media(max-width:760px){
+@media(max-width:1024px){
   .timeline{flex-direction:column;align-items:stretch;gap:8px;margin-top:34px}
   .tl-seg,.tl-today{display:none}
   .tl-item{width:auto;display:grid;grid-template-columns:46px 1fr;text-align:left;gap:12px;padding:0}
