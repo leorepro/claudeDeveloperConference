@@ -228,7 +228,7 @@ html[lang="en"] .tl-title{white-space:normal}
 .tl-today-flag:hover{transform:translateX(-50%) scale(1.07)}
 @keyframes tlPulse{0%{box-shadow:0 0 0 0 rgba(217,119,87,.5)}70%{box-shadow:0 0 0 9px rgba(217,119,87,0)}100%{box-shadow:0 0 0 0 rgba(217,119,87,0)}}
 @media(prefers-reduced-motion:reduce){.tl-today-dot{animation:none}.tl-today{transition:none}}
-@media(max-width:1024px){
+@media(max-width:1180px){
   .timeline{flex-direction:column;align-items:stretch;gap:8px;margin-top:34px}
   .tl-seg,.tl-today{display:none}
   .tl-item{width:auto;display:grid;grid-template-columns:46px 1fr;text-align:left;gap:12px;padding:0}
