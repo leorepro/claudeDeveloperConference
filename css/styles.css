@@ -208,26 +208,27 @@ footer b{color:#fff}
 .toc a:hover{background:rgba(255,255,255,.15)}
 
 /* 預算試算器 */
+.calc-wide{width:min(1240px,94vw);margin-left:50%;transform:translateX(-50%)}
 .calc{padding:0;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
-.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr))}
-.calc-group{padding:24px 22px;border-right:1px solid var(--line)}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.calc-group{padding:20px 18px;border-right:1px solid var(--line)}
 .calc-group:last-child{border-right:none}
 .calc-gh{display:flex;align-items:center;gap:7px;font-weight:700;font-size:12px;letter-spacing:.07em;
-  color:var(--accent-dark);text-transform:uppercase;margin-bottom:15px;padding-bottom:11px;
+  color:var(--accent-dark);text-transform:uppercase;margin-bottom:14px;padding-bottom:10px;
   border-bottom:2px solid var(--line)}
 .calc-gh::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
-.calc-group label{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--ink);
-  cursor:pointer;padding:11px 13px;border-radius:13px;border:1.5px solid var(--line);
-  margin-bottom:9px;transition:.18s;background:var(--bg)}
+.calc-group label{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink);
+  cursor:pointer;padding:10px 12px;border-radius:12px;border:1.5px solid var(--line);
+  margin-bottom:8px;transition:.18s;background:var(--bg)}
 .calc-group label:last-child{margin-bottom:0}
 .calc-group label:hover{border-color:var(--clay);transform:translateY(-1px)}
 .calc-group label:has(input:checked){border-color:var(--accent);background:#fff;
   box-shadow:0 4px 14px rgba(217,119,87,.16)}
 .calc-group label input{accent-color:var(--accent);width:17px;height:17px;margin:0;flex:none}
-.calc-group label span{flex:1 1 auto;font-weight:500}
+.calc-group label span{flex:1 1 auto;font-weight:500;line-height:1.35}
 .calc-group label:has(input:checked) span{font-weight:700}
 .calc-group label span.amt{flex:none;display:flex;flex-direction:column;align-items:flex-end;
-  text-align:right;font-weight:600}
+  text-align:right;font-weight:600;white-space:nowrap;line-height:1.25}
 .calc-group label b{color:var(--ink-soft);font-variant-numeric:tabular-nums;font-weight:600;font-size:13px}
 .calc-group label span.amt i{font-style:normal;font-weight:500;font-size:11px;color:var(--clay-dark);
   font-variant-numeric:tabular-nums;margin-top:2px}
