@@ -114,3 +114,28 @@ initCarousel('hallCarousel');
   // 語言切換後同步更新指標文案
   document.querySelectorAll('.langbtn').forEach(b=>b.addEventListener('click',()=>setTimeout(place,0)));
 })();
+
+// 倒數計時器：距離活動開幕（2026/12/12 09:00 高雄當地時間）的天/時/分/秒，每秒更新。
+(function(){
+  const root=document.getElementById('countdown'); if(!root) return;
+  const target=new Date('2026-12-12T09:00:00+08:00').getTime();
+  const D=document.getElementById('cdD'),H=document.getElementById('cdH'),M=document.getElementById('cdM'),S=document.getElementById('cdS');
+  const p2=n=>String(n).padStart(2,'0');
+  let timer=null;
+  function tick(){
+    const diff=target-Date.now();
+    if(diff<=0){
+      const l=(()=>{try{return localStorage.getItem('forumLang')||'zh';}catch(e){return 'zh';}})();
+      const msg={zh:'活動進行中 🎉',en:'Happening now 🎉',ja:'開催中 🎉'}[l]||'活動進行中 🎉';
+      const u=root.querySelector('.cd-units'); if(u) u.innerHTML='<div class="cd-live">'+msg+'</div>';
+      if(timer) clearInterval(timer);
+      return;
+    }
+    const s=Math.floor(diff/1000);
+    if(D) D.textContent=Math.floor(s/86400);
+    if(H) H.textContent=p2(Math.floor(s%86400/3600));
+    if(M) M.textContent=p2(Math.floor(s%3600/60));
+    if(S) S.textContent=p2(s%60);
+  }
+  tick(); timer=setInterval(tick,1000);
+})();
