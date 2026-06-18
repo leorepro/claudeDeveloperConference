@@ -141,19 +141,29 @@ tfoot td{font-weight:800;background:#F6ECDA;border-top:2px solid var(--clay)}
 .plan li:before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:800}
 
 /* 活動籌備時間軸 */
-.timeline{display:flex;align-items:flex-start;justify-content:center;margin-top:34px}
-.tl-item{flex:0 0 auto;width:148px;position:relative;padding:0;text-align:center}
+.timeline{position:relative;display:flex;align-items:flex-start;justify-content:center;margin-top:48px}
+.tl-item{flex:0 0 auto;width:150px;position:relative;padding:0;text-align:center}
 .tl-seg{flex:1 1 0;min-width:16px;height:3px;background:var(--line);margin-top:17px;border-radius:2px}
 .tl-dot{width:38px;height:38px;border-radius:50%;background:#fff;border:3px solid var(--accent);
   color:var(--accent-dark);display:grid;place-items:center;margin:0 auto 14px;position:relative;z-index:1;
   font-size:17px;box-shadow:var(--shadow)}
 .tl-item.hl .tl-dot{background:var(--accent);color:#fff;border-color:var(--accent)}
 .tl-month{font-weight:800;color:var(--accent-dark);font-size:13px;letter-spacing:.02em;white-space:nowrap}
-.tl-title{font-weight:700;margin:4px 0 5px;font-size:15px;color:var(--ink);white-space:nowrap}
+.tl-title{font-weight:700;margin:4px 0 5px;font-size:14.5px;color:var(--ink);white-space:nowrap}
 .tl-desc{font-size:12.5px;color:var(--ink-soft);line-height:1.55}
+html[lang="en"] .tl-title{white-space:normal}
+/* 時間軸「今天」進度指標：依今天日期按比例定位 */
+.tl-today{position:absolute;top:0;height:38px;transform:translateX(-50%);z-index:5;pointer-events:none;transition:left .6s cubic-bezier(.4,0,.2,1)}
+.tl-today-dot{position:absolute;top:13px;left:50%;transform:translateX(-50%);width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid #fff;animation:tlPulse 1.8s infinite}
+.tl-today-stem{position:absolute;top:-4px;left:50%;transform:translateX(-50%);width:2px;height:23px;background:linear-gradient(var(--accent-dark),rgba(217,119,87,.12))}
+.tl-today-flag{position:absolute;top:-28px;left:50%;transform:translateX(-50%);white-space:nowrap;display:flex;gap:6px;align-items:center;background:var(--accent-dark);color:#fff;font-size:11px;font-weight:700;line-height:1;padding:4px 9px;border-radius:999px;box-shadow:var(--shadow);pointer-events:auto;transition:transform .15s}
+.tl-today-flag span{font-weight:600;opacity:.9}
+.tl-today-flag:hover{transform:translateX(-50%) scale(1.07)}
+@keyframes tlPulse{0%{box-shadow:0 0 0 0 rgba(217,119,87,.5)}70%{box-shadow:0 0 0 9px rgba(217,119,87,0)}100%{box-shadow:0 0 0 0 rgba(217,119,87,0)}}
+@media(prefers-reduced-motion:reduce){.tl-today-dot{animation:none}.tl-today{transition:none}}
 @media(max-width:760px){
-  .timeline{flex-direction:column;align-items:stretch;gap:8px}
-  .tl-seg{display:none}
+  .timeline{flex-direction:column;align-items:stretch;gap:8px;margin-top:34px}
+  .tl-seg,.tl-today{display:none}
   .tl-item{width:auto;display:grid;grid-template-columns:46px 1fr;text-align:left;gap:12px;padding:0}
   .tl-item:before{content:"";position:absolute;left:18px;top:0;bottom:0;width:3px;background:var(--line)}
   .tl-item:first-child:before{top:18px}
