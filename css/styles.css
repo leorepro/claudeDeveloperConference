@@ -132,8 +132,8 @@ tfoot td{font-weight:800;background:#F6ECDA;border-top:2px solid var(--clay)}
 .grid-table td.span{background:#FBF4E9;font-weight:600;color:var(--ink-soft);text-align:center}
 .grid-table td.span.hl{background:#FCE3D8;color:var(--accent-dark);font-weight:700}
 .grid-table tr.rnd td:not(.tcell){background:#fff}
-.grid-table th.rest-h{color:var(--ink-soft)}
-.grid-table th.rest-h small{color:#C9BCA8}
+.grid-table th.rest-h{color:rgba(255,255,255,.72)}
+.grid-table th.rest-h small{color:rgba(255,255,255,.5)}
 .grid-table tr.rnd td.rest{background:#F4ECDD;color:var(--ink-soft);font-style:italic;font-size:12px}
 .grid-table tfoot td{background:#F6ECDA;text-align:center}
 
