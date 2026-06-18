@@ -123,7 +123,8 @@ tbody tr:hover{background:#FBF4E9}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 tfoot td{font-weight:800;background:#F6ECDA;border-top:2px solid var(--clay)}
 /* 時間 × 分軌 格狀表 */
-.grid-table{min-width:760px}
+.grid-table{min-width:1040px}
+.grid-table tr.rnd td:not(.tcell){white-space:nowrap}
 .grid-table th small{display:block;font-weight:500;color:#C9BCA8;font-size:11px;margin-top:2px}
 .grid-table tbody td{font-size:13px;vertical-align:middle}
 .grid-table td.tcell{font-weight:700;white-space:nowrap;background:#FBF8F1}
@@ -131,6 +132,9 @@ tfoot td{font-weight:800;background:#F6ECDA;border-top:2px solid var(--clay)}
 .grid-table td.span{background:#FBF4E9;font-weight:600;color:var(--ink-soft);text-align:center}
 .grid-table td.span.hl{background:#FCE3D8;color:var(--accent-dark);font-weight:700}
 .grid-table tr.rnd td:not(.tcell){background:#fff}
+.grid-table th.rest-h{color:var(--ink-soft)}
+.grid-table th.rest-h small{color:#C9BCA8}
+.grid-table tr.rnd td.rest{background:#F4ECDD;color:var(--ink-soft);font-style:italic;font-size:12px}
 .grid-table tfoot td{background:#F6ECDA;text-align:center}
 
 .pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px}
