@@ -262,41 +262,51 @@
 <section id="agenda">
   <div class="wrap">
     <span class="sec-tag" data-i18n="ag_tag">Suggested flow</span>
-    <h2 data-i18n="ag_h2">議程配置建議（1,000 人）</h2>
-    <p class="sec-intro" data-i18n="ag_intro">採方案 A 全層三樓：開場於最大主廳 301（全體 1,000 人），之後分組議程以 5–6 軌同時並行，每場 45 分鐘。下表為一日示意。</p>
+    <h2 data-i18n="ag_h2">議程配置與分軌人數</h2>
+    <p class="sec-intro" data-i18n="ag_intro">依官網實際容量規劃：開閉幕全體 1,000 人進 301 大會堂；分軌時段把最大的 301 也納入當主軌，確保 1,000 人同時都有座位。</p>
 
-    <div class="agenda">
-      <h3 data-i18n="ag_h3">🏛️ 全日主時程</h3>
-      <div class="track"><time>09:00–10:00</time><div><b data-i18n="ag_r1t">報到 · 迎賓咖啡</b><span data-i18n="ag_r1s">大廳落地窗區，貴賓室咖啡接待</span></div></div>
-      <div class="track"><time>10:00–10:50</time><div><b data-i18n="ag_r2t">開場主題演講（主廳 301・全體）</b><span data-i18n="ag_r2s">最大主廳 1,000 人，開幕專題、產品發表</span></div></div>
-      <div class="track"><time>11:00–11:45</time><div><b data-i18n="ag_r3t">分組議程・第 1 輪（5–6 軌並行・45 分）</b><span data-i18n="ag_r3s">302／303／304 系列會議室同時進行</span></div></div>
-      <div class="track"><time>11:45–13:15</time><div><b data-i18n="ag_r4t">午餐 · 交流 · 展攤體驗</b><span data-i18n="ag_r4s">科技體驗攤位同步開放</span></div></div>
-      <div class="track"><time>13:15–14:00</time><div><b data-i18n="ag_r5t">分組議程・第 2 輪（5–6 軌・45 分）</b><span data-i18n="ag_r5s">多軌並行</span></div></div>
-      <div class="track"><time>14:10–14:55</time><div><b data-i18n="ag_r6t">分組議程・第 3 輪（5–6 軌・45 分）</b><span data-i18n="ag_r6s">多軌並行</span></div></div>
-      <div class="track"><time>15:05–15:50</time><div><b data-i18n="ag_r7t">分組議程・第 4 輪（5–6 軌・45 分）</b><span data-i18n="ag_r7s">多軌並行</span></div></div>
-      <div class="track"><time>16:00–17:00</time><div><b data-i18n="ag_r8t">主廳閉幕 · Demo · 合影（主廳 301）</b><span data-i18n="ag_r8s">全體回到主場收尾</span></div></div>
+    <h3 style="font-size:18px;margin:6px 0 4px" data-i18n="cap_h">301 大會堂・官方容量 vs 本次規模</h3>
+    <div class="capgrid">
+      <div class="capcard"><b>2,000</b><small data-i18n="cap_theater">劇院型（官方）</small></div>
+      <div class="capcard"><b>1,200</b><small data-i18n="cap_class">教室型（官方）</small></div>
+      <div class="capcard"><b>800</b><small data-i18n="cap_round">圓桌型（官方）</small></div>
+      <div class="capcard"><b>2×1,000</b><small data-i18n="cap_split">可分兩區（官方）</small></div>
+      <div class="capcard hl"><b>1,000</b><small data-i18n="cap_ours">本次預估參加</small></div>
     </div>
+    <div class="note" data-i18n-html="cap_note"><b>解讀：</b>301 大會堂官方劇院容量達 2,000 人，本次預估 1,000 人僅約用一半，全體開閉幕綽綽有餘。面積 1,750 m²、無柱挑高 12.6 m、內建 8 國語同步翻譯。</div>
 
-    <h3 style="margin:30px 0 14px;font-size:18px" data-i18n="ag_tbl_h">5–6 軌並行・房間配置（每場 45 分鐘）</h3>
+    <h3 style="font-size:18px;margin:30px 0 6px" data-i18n="grid_h">🕘 一日時程 × 分軌配置</h3>
+    <p style="font-size:13px;color:var(--ink-soft);margin-bottom:14px" data-i18n="grid_sub">縱軸＝時間（上午 → 下午）；橫軸＝各軌房間與人數上限。</p>
     <div class="table-wrap">
-      <table>
+      <table class="grid-table">
         <thead>
-          <tr><th data-i18n="ag_th1">軌道</th><th data-i18n="ag_th2">會議室</th><th class="num" data-i18n="ag_th3">容納人數</th><th data-i18n="ag_th4">建議型態</th></tr>
+          <tr>
+            <th data-i18n="grid_time">時間</th>
+            <th>301 <small data-i18n="grid_main">主軌・≤1,000</small></th>
+            <th>304a <small>≤240</small></th>
+            <th>304b <small>≤240</small></th>
+            <th>302a <small>≤60</small></th>
+            <th>303a <small>≤60</small></th>
+            <th>303b <small>≤60</small></th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td>Track A</td><td>304a</td><td class="num">240</td><td data-i18n="ag_ty1">技術主題演講</td></tr>
-          <tr><td>Track B</td><td>304b</td><td class="num">240</td><td data-i18n="ag_ty2">實作工作坊 / Lab</td></tr>
-          <tr><td>Track C</td><td>302a</td><td class="num">60</td><td data-i18n="ag_ty3">深度技術場 / 圓桌</td></tr>
-          <tr><td>Track D</td><td>302b</td><td class="num">60</td><td data-i18n="ag_ty4">社群分享</td></tr>
-          <tr><td>Track E</td><td>303a</td><td class="num">60</td><td data-i18n="ag_ty5">新手入門 / Demo</td></tr>
-          <tr><td data-i18n="ag_trackF">Track F（選配）</td><td>303b</td><td class="num">60</td><td data-i18n="ag_ty6">合作夥伴 / 招募</td></tr>
+          <tr><td class="tcell">09:00–10:00</td><td class="span" colspan="6" data-i18n="g_reg">報到・迎賓咖啡（3F 大廳・休息區）</td></tr>
+          <tr><td class="tcell">10:00–10:50</td><td class="span hl" colspan="6" data-i18n="g_key">開場 Keynote・全體 1,000 人（301 大會堂全廳）</td></tr>
+          <tr class="rnd"><td class="tcell">11:00–11:45<small data-i18n="g_b1">第 1 輪</small></td><td data-i18n="trk_t1">技術主題演講</td><td data-i18n="trk_t2">工作坊 / Lab</td><td data-i18n="trk_t2b">工作坊 / Lab</td><td data-i18n="trk_t4">深度技術 / 圓桌</td><td data-i18n="trk_t5">社群分享</td><td data-i18n="trk_t6">新手 / Demo</td></tr>
+          <tr><td class="tcell">11:45–13:15</td><td class="span" colspan="6" data-i18n="g_lunch">午餐・交流・展攤（全層・休息區開放）</td></tr>
+          <tr class="rnd"><td class="tcell">13:15–14:00<small data-i18n="g_b2">第 2 輪</small></td><td data-i18n="trk_t1">技術主題演講</td><td data-i18n="trk_t2">工作坊 / Lab</td><td data-i18n="trk_t2b">工作坊 / Lab</td><td data-i18n="trk_t4">深度技術 / 圓桌</td><td data-i18n="trk_t5">社群分享</td><td data-i18n="trk_t6">新手 / Demo</td></tr>
+          <tr class="rnd"><td class="tcell">14:10–14:55<small data-i18n="g_b3">第 3 輪</small></td><td data-i18n="trk_t1">技術主題演講</td><td data-i18n="trk_t2">工作坊 / Lab</td><td data-i18n="trk_t2b">工作坊 / Lab</td><td data-i18n="trk_t4">深度技術 / 圓桌</td><td data-i18n="trk_t5">社群分享</td><td data-i18n="trk_t6">新手 / Demo</td></tr>
+          <tr class="rnd"><td class="tcell">15:05–15:50<small data-i18n="g_b4">第 4 輪</small></td><td data-i18n="trk_t1">技術主題演講</td><td data-i18n="trk_t2">工作坊 / Lab</td><td data-i18n="trk_t2b">工作坊 / Lab</td><td data-i18n="trk_t4">深度技術 / 圓桌</td><td data-i18n="trk_t5">社群分享</td><td data-i18n="trk_t6">新手 / Demo</td></tr>
+          <tr><td class="tcell">16:00–17:00</td><td class="span hl" colspan="6" data-i18n="g_close">閉幕・Demo・合影・全體 1,000 人（301 大會堂）</td></tr>
         </tbody>
         <tfoot>
-          <tr><td colspan="2" data-i18n="ag_tfoot1">分軌總容納</td><td class="num" data-i18n="ag_tfoot2">約 720</td><td data-i18n="ag_tfoot3">＋主廳 1,000（開閉幕全體）</td></tr>
+          <tr><td data-i18n="g_cap">同時容納</td><td colspan="6" data-i18n="g_capv">分軌 6 軌合計約 1,460 席 ＞ 預估 1,000，餘裕充足</td></tr>
         </tfoot>
       </table>
     </div>
-    <div class="note" data-i18n-html="ag_note">每輪 45 分鐘演講、輪間保留約 10–15 分鐘轉場與走動交流。4 輪 × 5–6 軌約可容納 <b>20–24 場</b>議程。302e／303e 可作備援軌或講者休息室。</div>
+
+    <div class="note" data-i18n-html="rest_note"><b>🛋️ 休息區規劃：</b>建議於 3F 大廳落地窗區、貴賓休息室與東西側走廊段設置休息／洽談區與咖啡補給站，供分軌轉場（每輪間 10–15 分）與午間交流使用；302e／303e 可作備援軌或安靜休息室。</div>
   </div>
 </section>
 

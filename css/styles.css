@@ -70,8 +70,8 @@ h2{font-size:clamp(24px,3.4vw,34px);font-weight:800;letter-spacing:-.3px;margin-
   background:linear-gradient(135deg,#F6E5D2,#EFcFae);font-size:22px;margin-bottom:16px}
 
 figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);
-  background:#F1E8D8;box-shadow:var(--shadow)}
-figure .ph{width:100%;aspect-ratio:4/3;display:block;background:#EFE4D2;object-fit:cover}
+  background:#F1E8D8;box-shadow:var(--shadow);display:flex;flex-direction:column;height:100%}
+figure .ph{width:100%;aspect-ratio:4/3;display:block;background:#EFE4D2;object-fit:cover;flex:0 0 auto}
 .photo-slot{width:100%;aspect-ratio:4/3;display:none;flex-direction:column;align-items:center;
   justify-content:center;gap:6px;
   background:repeating-linear-gradient(45deg,#F1E8D8,#F1E8D8 14px,#ECE0CC 14px,#ECE0CC 28px);
@@ -80,7 +80,7 @@ figure .ph{width:100%;aspect-ratio:4/3;display:block;background:#EFE4D2;object-f
 .photo-slot b{font-size:14px}
 .photo-slot code{font-size:12px;background:#fff;border:1px solid var(--line);
   padding:2px 8px;border-radius:6px;color:var(--ink-soft)}
-figcaption{padding:14px 18px;font-size:14px;color:var(--ink-soft);background:#fff}
+figcaption{padding:14px 18px;font-size:14px;color:var(--ink-soft);background:#fff;flex:1 1 auto}
 figcaption b{color:var(--ink)}
 
 /* Carousel */
@@ -127,7 +127,7 @@ tfoot td{font-weight:800;background:#F6ECDA;border-top:2px solid var(--clay)}
 .pill.small{background:#EAE3F1;color:#6A5499}
 
 .plan{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;
-  padding:30px;box-shadow:var(--shadow)}
+  padding:30px;box-shadow:var(--shadow);display:flex;flex-direction:column;height:100%}
 .plan.rec{border:2px solid var(--accent)}
 .plan .badge{position:absolute;top:-13px;left:30px;background:var(--accent);color:#fff;
   font-size:12px;font-weight:700;padding:5px 14px;border-radius:20px;letter-spacing:.05em}
@@ -135,7 +135,7 @@ tfoot td{font-weight:800;background:#F6ECDA;border-top:2px solid var(--clay)}
 .plan .price{font-size:32px;font-weight:800;margin:14px 0 0;color:var(--ink)}
 .plan .price small{font-size:15px;font-weight:600;color:var(--ink-soft)}
 .price-usd{font-size:17px;font-weight:700;color:var(--accent-dark);margin:0 0 4px}
-.plan ul{list-style:none;margin-top:16px}
+.plan ul{list-style:none;margin-top:16px;flex:1 1 auto}
 .plan li{padding:8px 0 8px 28px;position:relative;font-size:15px;color:var(--ink-soft);border-top:1px dashed var(--line)}
 .plan li:before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:800}
 
