@@ -86,7 +86,8 @@ initCarousel('hallCarousel');
   const L={
     zh:{t:'今天',go:n=>'距活動 '+n+' 天',day:'就是今天！',end:'活動已結束'},
     en:{t:'Today',go:n=>n+' days to go',day:'It’s today!',end:'Event ended'},
-    ja:{t:'今日',go:n=>'開催まで '+n+' 日',day:'本日開催！',end:'終了しました'}
+    ja:{t:'今日',go:n=>'開催まで '+n+' 日',day:'本日開催！',end:'終了しました'},
+    ko:{t:'오늘',go:n=>'행사까지 '+n+'일',day:'바로 오늘!',end:'행사 종료'}
   };
   const lang=()=>{try{return localStorage.getItem('forumLang')||'zh';}catch(e){return 'zh';}};
   const today=()=>{const t=new Date();t.setHours(0,0,0,0);return t;};
@@ -126,7 +127,7 @@ initCarousel('hallCarousel');
     const diff=target-Date.now();
     if(diff<=0){
       const l=(()=>{try{return localStorage.getItem('forumLang')||'zh';}catch(e){return 'zh';}})();
-      const msg={zh:'活動進行中 🎉',en:'Happening now 🎉',ja:'開催中 🎉'}[l]||'活動進行中 🎉';
+      const msg={zh:'活動進行中 🎉',en:'Happening now 🎉',ja:'開催中 🎉',ko:'진행 중 🎉'}[l]||'活動進行中 🎉';
       const u=root.querySelector('.cd-units'); if(u) u.innerHTML='<div class="cd-live">'+msg+'</div>';
       if(timer) clearInterval(timer);
       return;
