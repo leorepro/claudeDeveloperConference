@@ -141,24 +141,24 @@ tfoot td{font-weight:800;background:#F6ECDA;border-top:2px solid var(--clay)}
 .plan li:before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:800}
 
 /* 活動籌備時間軸 */
-.timeline{display:flex;margin-top:34px}
-.tl-item{flex:1 1 0;min-width:104px;position:relative;padding:0 10px;text-align:center}
-.tl-item:before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:var(--line);z-index:0}
-.tl-item:first-child:before{left:50%}
-.tl-item:last-child:before{right:50%}
+.timeline{display:flex;align-items:flex-start;justify-content:center;margin-top:34px}
+.tl-item{flex:0 0 auto;width:148px;position:relative;padding:0;text-align:center}
+.tl-seg{flex:1 1 0;min-width:16px;height:3px;background:var(--line);margin-top:17px;border-radius:2px}
 .tl-dot{width:38px;height:38px;border-radius:50%;background:#fff;border:3px solid var(--accent);
   color:var(--accent-dark);display:grid;place-items:center;margin:0 auto 14px;position:relative;z-index:1;
   font-size:17px;box-shadow:var(--shadow)}
 .tl-item.hl .tl-dot{background:var(--accent);color:#fff;border-color:var(--accent)}
-.tl-month{font-weight:800;color:var(--accent-dark);font-size:13px;letter-spacing:.02em}
-.tl-title{font-weight:700;margin:3px 0 5px;font-size:15px;color:var(--ink)}
-.tl-desc{font-size:13px;color:var(--ink-soft);line-height:1.55}
+.tl-month{font-weight:800;color:var(--accent-dark);font-size:13px;letter-spacing:.02em;white-space:nowrap}
+.tl-title{font-weight:700;margin:4px 0 5px;font-size:15px;color:var(--ink);white-space:nowrap}
+.tl-desc{font-size:12.5px;color:var(--ink-soft);line-height:1.55}
 @media(max-width:760px){
-  .timeline{flex-direction:column;gap:8px}
-  .tl-item{display:grid;grid-template-columns:46px 1fr;text-align:left;gap:12px;padding:0}
-  .tl-item:before{left:18px;right:auto;top:0;bottom:0;width:3px;height:auto}
+  .timeline{flex-direction:column;align-items:stretch;gap:8px}
+  .tl-seg{display:none}
+  .tl-item{width:auto;display:grid;grid-template-columns:46px 1fr;text-align:left;gap:12px;padding:0}
+  .tl-item:before{content:"";position:absolute;left:18px;top:0;bottom:0;width:3px;background:var(--line)}
   .tl-item:first-child:before{top:18px}
   .tl-item:last-child:before{bottom:auto;height:18px}
+  .tl-month,.tl-title{white-space:normal}
   .tl-dot{margin:0}
   .tl-body{padding-bottom:18px}
 }
