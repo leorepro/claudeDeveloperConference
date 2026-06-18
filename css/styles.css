@@ -110,6 +110,17 @@ thead th{background:#2A2118;color:#F4E7D4;font-weight:600;font-size:13px;letter-
 tbody tr:hover{background:#FBF4E9}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 tfoot td{font-weight:800;background:#F6ECDA;border-top:2px solid var(--clay)}
+/* 時間 × 分軌 格狀表 */
+.grid-table{min-width:760px}
+.grid-table th small{display:block;font-weight:500;color:#C9BCA8;font-size:11px;margin-top:2px}
+.grid-table tbody td{font-size:13px;vertical-align:middle}
+.grid-table td.tcell{font-weight:700;white-space:nowrap;background:#FBF8F1}
+.grid-table td.tcell small{display:block;font-weight:600;color:var(--accent-dark);font-size:11px}
+.grid-table td.span{background:#FBF4E9;font-weight:600;color:var(--ink-soft);text-align:center}
+.grid-table td.span.hl{background:#FCE3D8;color:var(--accent-dark);font-weight:700}
+.grid-table tr.rnd td:not(.tcell){background:#fff}
+.grid-table tfoot td{background:#F6ECDA;text-align:center}
+
 .pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px}
 .pill.main{background:#FCE3D8;color:var(--accent-dark)}
 .pill.mid{background:#E3EFE8;color:var(--good)}
