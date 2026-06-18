@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# 編輯器
+.vscode/
+.idea/
+*.swp
+*~
+
+# 暫存與紀錄
+*.log
+*.tmp
+Thumbs.db
+
+# 相依套件（本專案為純靜態網站，通常用不到）
+node_modules/
