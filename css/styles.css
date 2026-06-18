@@ -243,3 +243,5 @@ footer b{color:#fff}
   .calc-group:last-child{border-bottom:none}
   .calc-nums b{font-size:28px}
 }
+.freepill{display:inline-block;margin-left:8px;padding:2px 9px;border-radius:20px;font-size:12px;
+  font-weight:700;color:var(--good);background:rgba(63,125,91,.12);vertical-align:middle;letter-spacing:.02em}
