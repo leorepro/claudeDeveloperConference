@@ -46,6 +46,7 @@ initCarousel('hallCarousel');
   const root=document.getElementById('budgetCalc'); if(!root) return;
   const RATE=32.5;
   const twdEl=document.getElementById('calcTwd'), usdEl=document.getElementById('calcUsd');
+  const usd=v=>Math.round(v/RATE/100)*100;
   function recalc(){
     let sum=0;
     const venue=root.querySelector('input[name="cVenue"]:checked');
@@ -53,10 +54,14 @@ initCarousel('hallCarousel');
     if(venue) sum+=+venue.value;
     if(gift) sum+=+gift.value;
     root.querySelectorAll('input.calc-opt:checked').forEach(c=>sum+=+c.value);
-    const usd=Math.round(sum/RATE/100)*100;
     twdEl.textContent='NT$'+sum.toLocaleString('en-US');
-    usdEl.textContent='≈ US$'+usd.toLocaleString('en-US');
+    usdEl.textContent='≈ US$'+usd(sum).toLocaleString('en-US');
   }
+  // 每個項目顯示對應美金（同匯率，四捨五入到百位）。
+  root.querySelectorAll('label .amt i').forEach(el=>{
+    const v=+el.closest('label').querySelector('input').value;
+    el.textContent='≈ US$'+usd(v).toLocaleString('en-US');
+  });
   root.querySelectorAll('input').forEach(i=>i.addEventListener('change',recalc));
   recalc();
 })();
