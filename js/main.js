@@ -10,6 +10,17 @@ function setLang(l){
 }
 (function(){let l='zh';try{l=localStorage.getItem('forumLang')||'zh';}catch(e){}setLang(l);})();
 
+// 手機漢堡選單：開合分區導覽，點連結或點選單外區域自動收合。
+(function(){
+  const btn=document.getElementById('navToggle'), links=document.getElementById('navlinks');
+  if(!btn||!links) return;
+  const set=open=>{links.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);};
+  btn.addEventListener('click',e=>{e.stopPropagation();set(!links.classList.contains('open'));});
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>set(false)));
+  document.addEventListener('click',e=>{if(links.classList.contains('open')&&!links.contains(e.target)&&e.target!==btn)set(false);});
+  window.addEventListener('keydown',e=>{if(e.key==='Escape')set(false);});
+})();
+
 // 圖片輪播：左右按鈕、圓點、自動播放（滑鼠移入暫停）。
 function initCarousel(id){
   const root=document.getElementById(id); if(!root) return;

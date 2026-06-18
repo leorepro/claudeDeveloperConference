@@ -16,7 +16,7 @@
 <nav class="topnav" id="top">
   <div class="wrap topnav-inner">
     <a class="brand" href="#top">Claude Forum 2026 · <span>高雄</span></a>
-    <div class="navlinks">
+    <div class="navlinks" id="navlinks">
       <a href="#why" data-i18n="toc1">為何選此場地</a>
       <a href="#spaces" data-i18n="toc2">空間介紹</a>
       <a href="#facility" data-i18n="toc3">設備總覽</a>
@@ -32,6 +32,9 @@
       <button class="langbtn" data-l="ja" onclick="setLang('ja')">日本語</button>
       <button class="langbtn" data-l="ko" onclick="setLang('ko')">한국어</button>
     </div>
+    <button class="navtoggle" id="navToggle" aria-label="開啟選單" aria-controls="navlinks" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
