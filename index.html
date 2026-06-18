@@ -255,8 +255,43 @@
       <div class="card"><div class="ico">🍽️</div><h3 data-i18n="din_t">活動後晚餐聚會（約 30 人）</h3><p data-i18n="din_d">活動結束後團隊／講者聚餐，預估每人約 NT$1,200，預留 NT$36,000（約 US$1,100）。</p></div>
       <div class="card"><div class="ico">🎁</div><h3 data-i18n="giftA_t">紀念品方案①：每人 NT$100（精簡禮包）</h3><p data-i18n="giftA_d">客製鑰匙圈＋貼紙組＋頸帶識別證，輕量好攜帶；1,000 份約 NT$100,000（約 US$3,100）。</p></div>
       <div class="card"><div class="ico">🎀</div><h3 data-i18n="giftB_t">紀念品方案②：每人 NT$200（升級禮包）</h3><p data-i18n="giftB_d">帆布托特袋＋環保隨行杯＋客製鑰匙圈＋筆記本，質感與實用兼具；1,000 份約 NT$200,000（約 US$6,200）。</p></div>
+      <div class="card"><div class="ico">🎤</div><h3 data-i18n="host_t">主持人費用</h3><p data-i18n="host_d">全天專業／雙語主持，台灣行情約 NT$20,000–30,000，預留 NT$30,000（約 US$900）。</p></div>
+      <div class="card"><div class="ico">📷</div><h3 data-i18n="photo_t">攝影師費用</h3><p data-i18n="photo_d">全天活動攝影包套，台灣行情約 NT$12,000–28,000，預留 NT$30,000（約 US$900）含雙機／交通。</p></div>
+      <div class="card"><div class="ico">🎨</div><h3 data-i18n="deco_t">場地佈置費用</h3><p data-i18n="deco_d">主視覺背板、舞台、報到區、指標與動線佈置等，千人規模預留 NT$150,000（約 US$4,600）。</p></div>
+      <div class="card"><div class="ico">🧹</div><h3 data-i18n="clean_t">額外清潔費預留</h3><p data-i18n="clean_d">場地報價已含基本清潔，另預留加場清潔／垃圾清運 NT$20,000（約 US$600）。</p></div>
       <div class="card"><div class="ico">🧾</div><h3 data-i18n="misc_t">雜支／預備金</h3><p data-i18n="misc_d">印刷布置、運費、志工餐點與臨時採購等，抓總預算約 8%，預留 NT$120,000（約 US$3,700）。</p></div>
-      <div class="card" style="border:2px solid var(--accent)"><div class="ico">🧮</div><h3 data-i18n="tot_t">建議總預算（方案 A ＋ 晚餐 ＋ 紀念品 ＋ 雜支）</h3><p data-i18n-html="tot_d">場地 1,310,190 ＋ 晚餐 36,000 ＋ 雜支 120,000 ＋ 紀念品 100,000–200,000 ＝ 約 <b>NT$1,566,190–1,666,190（約 US$48,200–51,300）</b>。</p></div>
+      <div class="card" style="border:2px solid var(--accent)"><div class="ico">🧮</div><h3 data-i18n="tot_t">建議總預算（方案 A ＋ 全部項目）</h3><p data-i18n-html="tot_d">場地 1,310,190 ＋ 晚餐 36,000 ＋ 主持 30,000 ＋ 攝影 30,000 ＋ 佈置 150,000 ＋ 清潔預留 20,000 ＋ 雜支 120,000 ＋ 紀念品 100,000–200,000 ＝ 約 <b>NT$1,796,190–1,896,190（約 US$55,300–58,300）</b>。</p></div>
+    </div>
+
+    <h3 style="margin:34px 0 6px;font-size:18px" data-i18n="calc_h">🧮 預算試算器（勾選即時加總）</h3>
+    <p style="font-size:13px;color:var(--ink-soft);margin-bottom:16px" data-i18n="calc_sub">勾選你要的項目，下方即時顯示新台幣與美金總額（匯率約 1 USD ≈ 32.5 TWD）。</p>
+    <div class="calc card" id="budgetCalc">
+      <div class="calc-grid">
+        <div class="calc-group">
+          <div class="calc-gh" data-i18n="calc_g_venue">場地（擇一）</div>
+          <label><input type="radio" name="cVenue" value="1310190" checked><span data-i18n="calc_venueA">方案 A：全層三樓全包</span><b>NT$1,310,190</b></label>
+          <label><input type="radio" name="cVenue" value="547050"><span data-i18n="calc_venueB">方案 B：僅主廳 301</span><b>NT$547,050</b></label>
+        </div>
+        <div class="calc-group">
+          <div class="calc-gh" data-i18n="calc_g_gift">紀念品（擇一）</div>
+          <label><input type="radio" name="cGift" value="0"><span data-i18n="calc_giftN">不含紀念品</span><b>NT$0</b></label>
+          <label><input type="radio" name="cGift" value="100000" checked><span data-i18n="calc_giftA">方案①每人 NT$100</span><b>NT$100,000</b></label>
+          <label><input type="radio" name="cGift" value="200000"><span data-i18n="calc_giftB">方案②每人 NT$200</span><b>NT$200,000</b></label>
+        </div>
+        <div class="calc-group">
+          <div class="calc-gh" data-i18n="calc_g_extra">加購項目（可複選）</div>
+          <label><input type="checkbox" class="calc-opt" value="36000" checked><span data-i18n="calc_dinner">晚餐聚會</span><b>NT$36,000</b></label>
+          <label><input type="checkbox" class="calc-opt" value="30000" checked><span data-i18n="calc_host">主持人</span><b>NT$30,000</b></label>
+          <label><input type="checkbox" class="calc-opt" value="30000" checked><span data-i18n="calc_photo">攝影師</span><b>NT$30,000</b></label>
+          <label><input type="checkbox" class="calc-opt" value="150000" checked><span data-i18n="calc_deco">場地佈置</span><b>NT$150,000</b></label>
+          <label><input type="checkbox" class="calc-opt" value="20000" checked><span data-i18n="calc_clean">額外清潔預留</span><b>NT$20,000</b></label>
+          <label><input type="checkbox" class="calc-opt" value="120000" checked><span data-i18n="calc_misc">雜支／預備金</span><b>NT$120,000</b></label>
+        </div>
+      </div>
+      <div class="calc-total">
+        <span data-i18n="calc_total">預估總額</span>
+        <div class="calc-nums"><b id="calcTwd">NT$0</b><em id="calcUsd">≈ US$0</em></div>
+      </div>
     </div>
 
     <div class="note" data-i18n-html="co_note"><b>待確認事項：</b>① 明細表為未稅報價，方案總價已外加 5% 營業稅；② 進出場費用與保全費尚未列入（場地另計）；③ 半天（單時段）可使租借費約減半；④ 美金金額以匯率約 1 USD ≈ 32.5 TWD 換算，僅供參考；⑤ 確切活動日期確認後場地方才提供正式報價。</div>
@@ -269,17 +304,7 @@
     <span class="sec-tag" data-i18n="ag_tag">Suggested flow</span>
     <h2 data-i18n="ag_h2">議程配置與分軌人數</h2>
 
-    <h3 style="font-size:18px;margin:14px 0 4px" data-i18n="cap_h">301 大會堂・官方容量 vs 本次規模</h3>
-    <div class="capgrid">
-      <div class="capcard"><b>2,000</b><small data-i18n="cap_theater">劇院型（官方）</small></div>
-      <div class="capcard"><b>1,200</b><small data-i18n="cap_class">教室型（官方）</small></div>
-      <div class="capcard"><b>800</b><small data-i18n="cap_round">圓桌型（官方）</small></div>
-      <div class="capcard"><b>2×1,000</b><small data-i18n="cap_split">可分兩區（官方）</small></div>
-      <div class="capcard hl"><b>1,000</b><small data-i18n="cap_ours">本次預估參加</small></div>
-    </div>
-    <div class="note" data-i18n-html="cap_note"><b>解讀：</b>301 大會堂官方劇院容量達 2,000 人，本次預估 1,000 人僅約用一半，全體開閉幕綽綽有餘。面積 1,750 m²、無柱挑高 12.6 m、內建 8 國語同步翻譯。</div>
-
-    <h3 style="font-size:18px;margin:30px 0 6px" data-i18n="grid_h">🕘 一日時程 × 分軌配置</h3>
+    <h3 style="font-size:18px;margin:14px 0 6px" data-i18n="grid_h">🕘 一日時程 × 分軌配置</h3>
     <p style="font-size:13px;color:var(--ink-soft);margin-bottom:14px" data-i18n="grid_sub">縱軸＝時間（上午 → 下午）；橫軸＝各軌房間與人數上限。</p>
     <div class="table-wrap">
       <table class="grid-table">

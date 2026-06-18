@@ -40,3 +40,23 @@ function initCarousel(id){
   go(0); restart();
 }
 initCarousel('hallCarousel');
+
+// 預算試算器：勾選即時加總，顯示新台幣與美金（匯率 1 USD ≈ 32.5 TWD）。
+(function(){
+  const root=document.getElementById('budgetCalc'); if(!root) return;
+  const RATE=32.5;
+  const twdEl=document.getElementById('calcTwd'), usdEl=document.getElementById('calcUsd');
+  function recalc(){
+    let sum=0;
+    const venue=root.querySelector('input[name="cVenue"]:checked');
+    const gift=root.querySelector('input[name="cGift"]:checked');
+    if(venue) sum+=+venue.value;
+    if(gift) sum+=+gift.value;
+    root.querySelectorAll('input.calc-opt:checked').forEach(c=>sum+=+c.value);
+    const usd=Math.round(sum/RATE/100)*100;
+    twdEl.textContent='NT$'+sum.toLocaleString('en-US');
+    usdEl.textContent='≈ US$'+usd.toLocaleString('en-US');
+  }
+  root.querySelectorAll('input').forEach(i=>i.addEventListener('change',recalc));
+  recalc();
+})();

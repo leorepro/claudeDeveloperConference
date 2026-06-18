@@ -204,3 +204,21 @@ footer b{color:#fff}
 .toc a{font-size:13px;color:#EDE3D3;border:1px solid rgba(255,255,255,.25);
   padding:7px 14px;border-radius:20px;text-decoration:none;transition:.2s}
 .toc a:hover{background:rgba(255,255,255,.15)}
+
+/* 預算試算器 */
+.calc{padding:22px}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.calc-group{display:flex;flex-direction:column;gap:8px}
+.calc-gh{font-weight:700;font-size:14px;color:var(--accent-dark);margin-bottom:2px}
+.calc-group label{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink);
+  cursor:pointer;padding:6px 8px;border-radius:10px;transition:.15s}
+.calc-group label:hover{background:var(--bg)}
+.calc-group label input{accent-color:var(--accent);margin:0}
+.calc-group label span{flex:1 1 auto}
+.calc-group label b{color:var(--ink-soft);font-variant-numeric:tabular-nums;font-weight:600}
+.calc-total{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  margin-top:20px;padding-top:18px;border-top:2px dashed var(--line)}
+.calc-total>span{font-weight:700;font-size:16px}
+.calc-nums{display:flex;align-items:baseline;gap:12px}
+.calc-nums b{font-size:26px;color:var(--accent-dark);font-variant-numeric:tabular-nums}
+.calc-nums em{font-style:normal;font-size:16px;color:var(--ink-soft)}
