@@ -142,7 +142,7 @@ tfoot td{font-weight:800;background:#F6ECDA;border-top:2px solid var(--clay)}
 
 /* 活動籌備時間軸 */
 .timeline{display:flex;margin-top:34px}
-.tl-item{flex:1;position:relative;padding:0 10px;text-align:center}
+.tl-item{flex:1 1 0;min-width:104px;position:relative;padding:0 10px;text-align:center}
 .tl-item:before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:var(--line);z-index:0}
 .tl-item:first-child:before{left:50%}
 .tl-item:last-child:before{right:50%}
