@@ -110,6 +110,7 @@ initCarousel('hallCarousel');
   }
   place();
   window.addEventListener('resize',place);
+  setInterval(place,36e5); // 每小時依系統日期重算，跨日自動移動到新位置
   // 語言切換後同步更新指標文案
   document.querySelectorAll('.langbtn').forEach(b=>b.addEventListener('click',()=>setTimeout(place,0)));
 })();
