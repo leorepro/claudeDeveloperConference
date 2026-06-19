@@ -151,3 +151,56 @@ initCarousel('hallCarousel');
   }
   tick(); timer=setInterval(tick,1000);
 })();
+
+// 預算佔比長條圖：把目前勾選且金額 > 0 的項目，依金額由大到小排成水平長條，
+// 長度＝佔總額比例、顏色越深佔比越大，類似熱力圖。勾選變動與語言切換時即時重繪。
+(function(){
+  const root=document.getElementById('budgetCalc');
+  const map=document.getElementById('budgetMap');
+  if(!root||!map) return;
+
+  // 收集目前生效的項目（場地／紀念品／茶點擇一 ＋ 已勾選加購），名稱取已翻譯的標籤文字。
+  function collect(){
+    const sel='input[name="cVenue"]:checked,input[name="cGift"]:checked,input[name="cTea"]:checked,input.calc-opt:checked';
+    const items=[];
+    root.querySelectorAll(sel).forEach(inp=>{
+      const v=+inp.value; if(!(v>0)) return;
+      const label=inp.closest('label');
+      const nameEl=label && label.querySelector('span:not(.amt)');
+      items.push({name:nameEl?nameEl.textContent.trim():'', value:v});
+    });
+    return items.sort((a,b)=>b.value-a.value);
+  }
+
+  const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  function render(){
+    const items=collect();
+    map.innerHTML='';
+    if(!items.length) return;
+    const total=items.reduce((s,i)=>s+i.value,0);
+    const frag=document.createDocumentFragment();
+    items.forEach(it=>{
+      const share=it.value/total;
+      const t=Math.sqrt(share);            // 0..1：依佔比決定深淺
+      const light=72-t*34;                 // 淺色 72% → 深色 38%
+      const sat=52+t*14;
+      const pct=share*100;
+      const pctStr=(pct<1?pct.toFixed(1):Math.round(pct))+'%';
+      const amt='NT$'+it.value.toLocaleString('en-US');
+      const row=document.createElement('div');
+      row.className='bm-row';
+      row.title=it.name+' · '+amt+' · '+pctStr;
+      row.innerHTML='<span class="bm-name">'+esc(it.name)+'</span>'+
+        '<span class="bm-track"><span class="bm-fill" style="width:'+(share*100).toFixed(2)+'%;'+
+        'background:hsl(15 '+sat.toFixed(0)+'% '+light.toFixed(0)+'%)"></span></span>'+
+        '<span class="bm-amt">'+amt+'<em>'+pctStr+'</em></span>';
+      frag.appendChild(row);
+    });
+    map.appendChild(frag);
+  }
+
+  root.querySelectorAll('input').forEach(i=>i.addEventListener('change',render));
+  document.querySelectorAll('.langbtn').forEach(b=>b.addEventListener('click',()=>setTimeout(render,0)));
+  render();
+})();
