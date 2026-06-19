@@ -327,23 +327,26 @@ footer b{color:#fff}
 .freepill{display:inline-block;margin-left:8px;padding:2px 9px;border-radius:20px;font-size:12px;
   font-weight:700;color:var(--good);background:rgba(63,125,91,.12);vertical-align:middle;letter-spacing:.02em}
 
-/* ── 預算佔比長條圖（每項一條，長度＝佔比、顏色越深佔比越大） ── */
-.budget-map{display:flex;flex-direction:column;gap:7px;width:100%;padding:18px 20px;
+/* ── 預算佔比長條圖（單一長條分段，段長＝佔比、顏色越深佔比越大） ── */
+.budget-map{display:flex;flex-direction:column;gap:16px;width:100%;padding:20px 22px;
   background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
-.bm-row{display:grid;grid-template-columns:140px 1fr auto;align-items:center;gap:12px}
-.bm-name{font-size:13px;font-weight:600;color:var(--ink);line-height:1.3;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bm-track{display:block;position:relative;height:18px;background:#F4E3D2;border-radius:6px;overflow:hidden}
-.bm-fill{display:block;height:100%;border-radius:6px;min-width:3px;transition:width .25s ease,filter .15s ease}
-.bm-row:hover .bm-fill{filter:brightness(1.06) saturate(1.05)}
-.bm-amt{font-size:12px;font-weight:600;color:var(--ink-soft);font-variant-numeric:tabular-nums;
-  white-space:nowrap;text-align:right}
-.bm-amt em{font-style:normal;color:var(--accent-dark);margin-left:7px}
+.bm-bar{display:flex;width:100%;height:34px;border-radius:9px;overflow:hidden;background:#F4E3D2}
+.bm-seg{box-sizing:border-box;height:100%;min-width:2px;display:flex;align-items:center;
+  justify-content:center;color:#fff;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;
+  overflow:hidden;white-space:nowrap;border-right:2px solid var(--card);transition:filter .15s ease}
+.bm-seg:last-child{border-right:none}
+.bm-seg:hover{filter:brightness(1.08) saturate(1.05)}
+.bm-seg.light{color:var(--ink)}
+.bm-legend{display:flex;flex-wrap:wrap;gap:9px 20px}
+.bm-leg{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-soft)}
+.bm-leg i{width:11px;height:11px;border-radius:3px;flex:none}
+.bm-leg b{color:var(--ink);font-weight:600}
+.bm-leg em{font-style:normal;font-variant-numeric:tabular-nums}
+.bm-leg s{text-decoration:none;color:var(--accent-dark);font-weight:700;font-variant-numeric:tabular-nums}
 @media(max-width:640px){
-  .bm-row{grid-template-columns:104px 1fr auto;gap:8px}
-  .bm-name{font-size:12px}
-  .bm-amt{font-size:11px}
-  .bm-amt em{margin-left:4px}
+  .bm-bar{height:30px}
+  .bm-legend{gap:7px 14px}
+  .bm-leg{font-size:12px}
 }
 
 /* ── 手機細節打磨 ── */
