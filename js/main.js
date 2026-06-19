@@ -174,6 +174,26 @@ initCarousel('hallCarousel');
   }
 
   const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const RATE=32.5, usd=v=>Math.round(v/RATE/100)*100;
+
+  // 常駐的浮動提示框：滑鼠移到長條某一段（或對應圖例）時，顯示該項目名稱、金額與佔比。
+  const tip=document.createElement('div'); tip.className='bm-tip';
+
+  function showTip(el){
+    if(!el) return;
+    tip.innerHTML='<strong>'+esc(el.dataset.name)+'</strong>'+
+      '<span>NT$'+(+el.dataset.value).toLocaleString('en-US')+
+      ' · ≈ US$'+usd(+el.dataset.value).toLocaleString('en-US')+'</span>'+
+      '<b>'+el.dataset.pct+'</b>';
+    tip.classList.add('show');
+    const mr=map.getBoundingClientRect(), er=el.getBoundingClientRect();
+    const half=tip.offsetWidth/2;
+    let cx=er.left-mr.left+er.width/2;
+    cx=Math.max(half+6, Math.min(cx, map.clientWidth-half-6));
+    tip.style.left=cx+'px';
+    tip.style.top=(er.top-mr.top-9)+'px';
+  }
+  const hideTip=()=>tip.classList.remove('show');
 
   function render(){
     const items=collect();
@@ -183,7 +203,7 @@ initCarousel('hallCarousel');
     const maxShare=items[0].value/total;
     const bar=document.createElement('div'); bar.className='bm-bar';
     const legend=document.createElement('div'); legend.className='bm-legend';
-    items.forEach(it=>{
+    items.forEach((it,idx)=>{
       const share=it.value/total;
       const t=Math.sqrt(share/maxShare);   // 0..1：依相對佔比決定深淺
       const light=72-t*34;                 // 淺色 72% → 深色 38%
@@ -195,17 +215,24 @@ initCarousel('hallCarousel');
       const seg=document.createElement('div');
       seg.className='bm-seg'+(light>58?' light':'');
       seg.style.cssText='flex:0 0 '+pct.toFixed(3)+'%;background:'+color;
-      seg.title=it.name+' · '+amt+' · '+pctStr;
+      seg.dataset.name=it.name; seg.dataset.value=it.value; seg.dataset.pct=pctStr;
       if(pct>=7) seg.textContent=pctStr;   // 夠寬才在段內顯示百分比
       bar.appendChild(seg);
       const leg=document.createElement('div'); leg.className='bm-leg';
+      leg.dataset.name=it.name; leg.dataset.value=it.value; leg.dataset.pct=pctStr;
       leg.innerHTML='<i style="background:'+color+'"></i><b>'+esc(it.name)+'</b> '+
         '<em>'+amt+'</em> <s>'+pctStr+'</s>';
       legend.appendChild(leg);
     });
     map.appendChild(bar);
     map.appendChild(legend);
+    map.appendChild(tip);   // 重繪後把提示框補回容器
   }
+
+  // 事件委派：滑鼠在長條段或圖例上移動即顯示／更新提示，移出則隱藏。
+  map.addEventListener('mouseover',e=>{const el=e.target.closest('.bm-seg,.bm-leg'); if(el) showTip(el);});
+  map.addEventListener('mousemove',e=>{const el=e.target.closest('.bm-seg,.bm-leg'); if(el) showTip(el);});
+  map.addEventListener('mouseleave',hideTip);
 
   root.querySelectorAll('input').forEach(i=>i.addEventListener('change',render));
   document.querySelectorAll('.langbtn').forEach(b=>b.addEventListener('click',()=>setTimeout(render,0)));

@@ -4,7 +4,7 @@
   --good:#3F7D5B;--shadow:0 10px 30px rgba(60,40,20,.08);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{font-family:"Inter","PingFang TC","Hiragino Sans","Apple SD Gothic Neo","Noto Sans TC","Noto Sans JP","Noto Sans KR","Microsoft JhengHei","Malgun Gothic",sans-serif;
   font-feature-settings:"cv11","ss01";letter-spacing:-.003em;
   color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
@@ -328,8 +328,19 @@ footer b{color:#fff}
   font-weight:700;color:var(--good);background:rgba(63,125,91,.12);vertical-align:middle;letter-spacing:.02em}
 
 /* ── 預算佔比長條圖（單一長條分段，段長＝佔比、顏色越深佔比越大） ── */
-.budget-map{display:flex;flex-direction:column;gap:16px;width:100%;padding:20px 22px;
+.budget-map{position:relative;display:flex;flex-direction:column;gap:16px;width:100%;padding:20px 22px;
   background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+.bm-tip{position:absolute;z-index:20;left:0;top:0;pointer-events:none;opacity:0;
+  transform:translate(-50%,-100%);transition:opacity .12s ease;
+  background:var(--ink);color:#fff;padding:8px 12px;border-radius:10px;font-size:12.5px;
+  line-height:1.5;white-space:nowrap;box-shadow:0 8px 22px rgba(26,23,20,.22)}
+.bm-tip.show{opacity:1}
+.bm-tip strong{display:block;font-size:13px;font-weight:700;margin-bottom:1px}
+.bm-tip span{opacity:.9;font-variant-numeric:tabular-nums}
+.bm-tip b{margin-left:6px;color:var(--clay);font-weight:700;font-variant-numeric:tabular-nums}
+.bm-tip::after{content:"";position:absolute;left:50%;top:100%;transform:translateX(-50%);
+  border:6px solid transparent;border-top-color:var(--ink)}
+.bm-leg{cursor:default;transition:opacity .12s ease}
 .bm-bar{display:flex;width:100%;height:34px;border-radius:9px;overflow:hidden;background:#F4E3D2}
 .bm-seg{box-sizing:border-box;height:100%;min-width:2px;display:flex;align-items:center;
   justify-content:center;color:#fff;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;
@@ -351,6 +362,10 @@ footer b{color:#fff}
 
 /* ── 手機細節打磨 ── */
 @media(max-width:560px){
+  /* 手機上資料表改用較緊密的間距與字級，讓單次可見更多欄位、減少水平捲動；
+     仍保留各表原有 min-width 與單行顯示（不更動既有的不折行規則），水平捲動看完整欄位。 */
+  th,td{padding:10px 12px;font-size:13.5px}
+  .grid-table tbody td{font-size:12.5px}
   .brand{font-size:14px}
   .langbar{gap:2px;padding:3px}
   .langbtn{padding:7px 8px;font-size:11px}
