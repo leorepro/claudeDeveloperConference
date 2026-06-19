@@ -151,3 +151,63 @@ initCarousel('hallCarousel');
   }
   tick(); timer=setInterval(tick,1000);
 })();
+
+// 預算佔比長條圖：把目前勾選且金額 > 0 的項目，依金額由大到小組成「單一長條」，
+// 每段段長＝佔總額比例、顏色越深佔比越大；下方圖例顯示名稱、金額與佔比。
+// 勾選變動與語言切換時即時重繪。
+(function(){
+  const root=document.getElementById('budgetCalc');
+  const map=document.getElementById('budgetMap');
+  if(!root||!map) return;
+
+  // 收集目前生效的項目（場地／紀念品／茶點擇一 ＋ 已勾選加購），名稱取已翻譯的標籤文字。
+  function collect(){
+    const sel='input[name="cVenue"]:checked,input[name="cGift"]:checked,input[name="cTea"]:checked,input.calc-opt:checked';
+    const items=[];
+    root.querySelectorAll(sel).forEach(inp=>{
+      const v=+inp.value; if(!(v>0)) return;
+      const label=inp.closest('label');
+      const nameEl=label && label.querySelector('span:not(.amt)');
+      items.push({name:nameEl?nameEl.textContent.trim():'', value:v});
+    });
+    return items.sort((a,b)=>b.value-a.value);
+  }
+
+  const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  function render(){
+    const items=collect();
+    map.innerHTML='';
+    if(!items.length) return;
+    const total=items.reduce((s,i)=>s+i.value,0);
+    const maxShare=items[0].value/total;
+    const bar=document.createElement('div'); bar.className='bm-bar';
+    const legend=document.createElement('div'); legend.className='bm-legend';
+    items.forEach(it=>{
+      const share=it.value/total;
+      const t=Math.sqrt(share/maxShare);   // 0..1：依相對佔比決定深淺
+      const light=72-t*34;                 // 淺色 72% → 深色 38%
+      const sat=52+t*14;
+      const color='hsl(15 '+sat.toFixed(0)+'% '+light.toFixed(0)+'%)';
+      const pct=share*100;
+      const pctStr=(pct<1?pct.toFixed(1):Math.round(pct))+'%';
+      const amt='NT$'+it.value.toLocaleString('en-US');
+      const seg=document.createElement('div');
+      seg.className='bm-seg'+(light>58?' light':'');
+      seg.style.cssText='flex:0 0 '+pct.toFixed(3)+'%;background:'+color;
+      seg.title=it.name+' · '+amt+' · '+pctStr;
+      if(pct>=7) seg.textContent=pctStr;   // 夠寬才在段內顯示百分比
+      bar.appendChild(seg);
+      const leg=document.createElement('div'); leg.className='bm-leg';
+      leg.innerHTML='<i style="background:'+color+'"></i><b>'+esc(it.name)+'</b> '+
+        '<em>'+amt+'</em> <s>'+pctStr+'</s>';
+      legend.appendChild(leg);
+    });
+    map.appendChild(bar);
+    map.appendChild(legend);
+  }
+
+  root.querySelectorAll('input').forEach(i=>i.addEventListener('change',render));
+  document.querySelectorAll('.langbtn').forEach(b=>b.addEventListener('click',()=>setTimeout(render,0)));
+  render();
+})();
