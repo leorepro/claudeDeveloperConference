@@ -386,3 +386,44 @@ footer b{color:#fff}
   .lg-mini{display:inline}
   .langbtn{padding:7px 9px;min-width:30px;text-align:center}
 }
+
+/* 跨頁候選場地切換連結（高雄版 / 博雅版互連） */
+.navlinks a.venue-alt{font-weight:600;opacity:.85}
+.navlinks a.venue-alt::before{content:"";display:inline-block;width:1px;height:12px;background:currentColor;opacity:.3;margin-right:10px;vertical-align:middle}
+a.venue-alt-foot{display:inline-block;margin-top:10px;color:var(--accent);font-weight:600;text-decoration:none}
+a.venue-alt-foot:hover{text-decoration:underline}
+
+/* 內頁：回選擇頁連結 */
+.navlinks a.venue-choose{font-weight:600;opacity:.85}
+.navlinks a.venue-choose::before{content:"";display:inline-block;width:1px;height:12px;background:currentColor;opacity:.3;margin-right:10px;vertical-align:middle}
+a.venue-choose-foot{display:inline-block;margin-top:10px;margin-right:18px;color:var(--accent);font-weight:600;text-decoration:none}
+a.venue-choose-foot:hover{text-decoration:underline}
+
+/* ===== 形式選擇入口頁（index.html）===== */
+.chooser{min-height:100vh;display:flex;flex-direction:column;color:#fff;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#2A2118 0%,#5A4326 55%,#A87B45 100%)}
+.chooser::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 82% 12%,rgba(217,119,87,.34),transparent 50%)}
+.chooser-main{position:relative;z-index:2;flex:1 1 auto;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:54px 24px 64px}
+.chooser-main .eyebrow{margin-bottom:20px}
+.chooser-main h1{font-size:clamp(28px,4.6vw,46px);font-weight:800;letter-spacing:-.5px;line-height:1.2}
+.chooser-main h1 span{color:#F4C9A8}
+.chooser-lead{margin-top:16px;max-width:600px;font-size:clamp(15px,2vw,18px);color:#EDE3D3;line-height:1.6}
+.chooser .countdown{margin:26px auto 0}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;width:100%;max-width:840px;margin:42px auto 0}
+.choice{display:flex;flex-direction:column;text-align:left;text-decoration:none;color:inherit;overflow:hidden;
+  background:rgba(26,20,15,.42);border:1px solid rgba(255,255,255,.18);border-radius:20px;
+  backdrop-filter:blur(12px) saturate(1.2);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.choice:hover{transform:translateY(-6px);border-color:rgba(244,201,168,.55);box-shadow:0 22px 50px rgba(0,0,0,.4)}
+.choice-thumb{aspect-ratio:16/10;background-size:cover;background-position:center;position:relative}
+.choice-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,12,.04),rgba(20,16,12,.55))}
+.choice-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:9px;flex:1 1 auto}
+.choice-tag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:#F4C9A8;border:1px solid rgba(244,201,168,.45);padding:4px 12px;border-radius:30px}
+.choice-title{font-size:21px;font-weight:800;color:#fff;letter-spacing:-.2px}
+.choice-desc{font-size:14px;color:#E6D9C6;line-height:1.55;flex:1 1 auto}
+.choice-cta{margin-top:4px;font-weight:700;font-size:14px;color:#F8D2B2;transition:color .2s ease}
+.choice:hover .choice-cta{color:#fff}
+.chooser-foot{position:relative;z-index:2;text-align:center;padding:24px;font-size:13px;color:rgba(255,255,255,.62)}
+@media(max-width:680px){.choices{grid-template-columns:1fr;max-width:420px}}

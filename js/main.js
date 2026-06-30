@@ -127,10 +127,10 @@ initCarousel('hallCarousel');
   document.querySelectorAll('.langbtn').forEach(b=>b.addEventListener('click',()=>setTimeout(place,0)));
 })();
 
-// 倒數計時器：距離活動開幕（2026/12/12 09:00 高雄當地時間）的天/時/分/秒，每秒更新。
+// 倒數計時器：距離活動開幕（2026/12/5 09:00 高雄當地時間）的天/時/分/秒，每秒更新。
 (function(){
   const root=document.getElementById('countdown'); if(!root) return;
-  const target=new Date('2026-12-12T09:00:00+08:00').getTime();
+  const target=new Date('2026-12-05T09:00:00+08:00').getTime();
   const D=document.getElementById('cdD'),H=document.getElementById('cdH'),M=document.getElementById('cdM'),S=document.getElementById('cdS');
   const p2=n=>String(n).padStart(2,'0');
   let timer=null;

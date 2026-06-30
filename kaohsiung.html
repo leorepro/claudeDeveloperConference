@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1A1714">
+<title>Ship with Claude 2026 · 高雄展覽館 場地提案</title>
+<meta name="description" content="Ship with Claude 2026 高雄展覽館場地規劃提案：空間、設備、費用方案與交通位置。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="icon" type="image/x-icon" href="images/claude-favicon.ico">
+<link rel="icon" type="image/png" href="images/claude-icon.png">
+<link rel="apple-touch-icon" href="images/claude-icon.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="topnav" id="top">
+  <div class="wrap topnav-inner">
+    <a class="brand" href="#top">Ship with Claude</a>
+    <div class="navlinks" id="navlinks">
+      <a href="#why" data-i18n="toc1">為何選此場地</a>
+      <a href="#spaces" data-i18n="toc2">空間介紹</a>
+      <a href="#facility" data-i18n="toc3">設備總覽</a>
+      <a href="#cost" data-i18n="toc4">費用方案</a>
+      <a href="#travel" data-i18n="toc6">交通與位置</a>
+      <a class="venue-choose" href="index.html" data-i18n="venue_choose">← 選擇活動形式</a>
+      <a class="venue-alt" href="ntu.html" data-i18n="venue_alt">其他候選場地：台大博雅教學館 ↗</a>
+    </div>
+    <div class="langbar">
+      <button class="langbtn" data-l="zh" onclick="setLang('zh')"><span class="lg-full">繁中</span><span class="lg-mini">繁</span></button>
+      <button class="langbtn" data-l="en" onclick="setLang('en')"><span class="lg-full">EN</span><span class="lg-mini">EN</span></button>
+      <button class="langbtn" data-l="ja" onclick="setLang('ja')"><span class="lg-full">日本語</span><span class="lg-mini">日</span></button>
+      <button class="langbtn" data-l="ko" onclick="setLang('ko')"><span class="lg-full">한국어</span><span class="lg-mini">한</span></button>
+    </div>
+    <button class="navtoggle" id="navToggle" aria-label="開啟選單" aria-controls="navlinks" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="eyebrow">場地提案 · Venue Proposal</span>
+    <h1 data-i18n-html="h1">Ship with Claude 2026<br><span>高雄展覽館</span> 場地規劃提案</h1>
+    <p class="lead" data-i18n="lead">為 2026/12/5（週六）、預估 1,000 人規模的 Ship with Claude，提案以高雄展覽館作為主辦場地。</p>
+    <div class="countdown" id="countdown" aria-live="polite">
+      <span class="cd-label" data-i18n="cd_label">距離活動開幕還有</span>
+      <div class="cd-units">
+        <div class="cd-unit"><b id="cdD">--</b><small data-i18n="cd_d">天</small></div>
+        <div class="cd-unit"><b id="cdH">--</b><small data-i18n="cd_h">時</small></div>
+        <div class="cd-unit"><b id="cdM">--</b><small data-i18n="cd_m">分</small></div>
+        <div class="cd-unit"><b id="cdS">--</b><small data-i18n="cd_s">秒</small></div>
+      </div>
+    </div>
+    <div class="facts">
+      <div class="fact"><b data-i18n="f1v">1,000 人</b><small data-i18n="f1l">目標與會規模</small></div>
+      <div class="fact"><b data-i18n="f2v">2026/12/5（六）</b><small data-i18n="f2l">活動日期</small></div>
+      <div class="fact"><b data-i18n="f3v">高雄</b><small data-i18n="f3l">高雄展覽館 3F</small></div>
+      <div class="fact"><b data-i18n="f4v">1 天</b><small data-i18n="f4l">兩個時段（上午＋下午）</small></div>
+    </div>
+    <nav class="toc">
+      <a href="#why" data-i18n="toc1">為何選此場地</a>
+      <a href="#spaces" data-i18n="toc2">空間介紹</a>
+      <a href="#facility" data-i18n="toc3">設備總覽</a>
+      <a href="#cost" data-i18n="toc4">費用方案</a>
+      <a href="#travel" data-i18n="toc6">交通與位置</a>
+    </nav>
+  </div>
+</header>
+
+<!-- WHY -->
+<section id="why">
+  <div class="wrap">
+    <span class="sec-tag" data-i18n="why_tag">Why this venue</span>
+    <h2 data-i18n="why_h2">為什麼選高雄展覽館</h2>
+    <p class="sec-intro" data-i18n="why_intro">場地具備容納千人的主廳、可彈性分割的多軌會議室，以及完整舞台燈光音響，一站滿足主場演講、分組工作坊與交流晚宴。</p>
+    <div class="grid g3">
+      <div class="card"><div class="ico">🏛️</div><h3 data-i18n="why_c1t">千人主廳</h3><p data-i18n="why_c1d">301 主廳可容納 1,000 人，劇院式座位、雙投影布幕、視線無死角。</p></div>
+      <div class="card"><div class="ico">🧩</div><h3 data-i18n="why_c2t">多軌可彈性分割</h3><p data-i18n="why_c2d">同層 302／303／304 系列會議室可作分組議程與工作坊，與主場同層串連。</p></div>
+      <div class="card"><div class="ico">🎚️</div><h3 data-i18n="why_c3t">專業舞台設備</h3><p data-i18n="why_c3d">主廳具桁架燈光、軌道聚光燈與懸吊音響，演出等級，降低外租成本。</p></div>
+      <div class="card"><div class="ico">🌊</div><h3 data-i18n="why_c4t">港景落地窗</h3><p data-i18n="why_c4d">主廳整面落地玻璃帷幕，外望高雄港與市景，交流時段的天然亮點。</p></div>
+      <div class="card"><div class="ico">📺</div><h3 data-i18n="why_c5t">門口電子看板</h3><p data-i18n="why_c5d">各會議室門口電子螢幕可顯示當前場次主題，方便多軌指引與品牌露出。</p></div>
+      <div class="card"><div class="ico">☕</div><h3 data-i18n="why_c6t">貴賓休息室</h3><p data-i18n="why_c6d">提供貴賓休息空間並備咖啡豆可現場沖泡，適合講者與貴賓接待。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPACES -->
+<section id="spaces" style="background:#F4ECDD">
+  <div class="wrap">
+    <span class="sec-tag" data-i18n="sp_tag">Spaces</span>
+    <h2 data-i18n="sp_h2">空間介紹</h2>
+    <p class="sec-intro" data-i18n="sp_intro">以下為各空間實地場勘照片與用途建議。</p>
+
+    <div class="grid g2" style="margin-bottom:22px">
+      <figure>
+        <img class="ph" src="images/01-main-hall-theater.jpg" alt="301" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph1">主廳 301・劇院式</b><code>images/01-main-hall-theater.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap1"><b>301 主廳（劇院式）</b>　可容 1,000 人，雙投影布幕、舞台燈光、後方落地窗港景。大會主場 Keynote 用。</figcaption>
+      </figure>
+      <figure>
+        <img class="ph" src="images/02-main-hall-event.jpg" alt="301 event" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph2">主廳 301・活動實況</b><code>images/02-main-hall-event.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap2"><b>301 主廳（活動模式）</b>　可改為宴會＋展攤＋舞台配置，適合大會晚間交流。</figcaption>
+      </figure>
+    </div>
+
+    <div class="grid g3" style="margin-bottom:22px">
+      <figure>
+        <img class="ph" src="images/03-hall-harbor-view.jpg" alt="harbor" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph3">大廳・港景落地窗</b><code>images/03-hall-harbor-view.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap3"><b>主廳・港景落地窗</b>　整排劇院座椅、雙布幕，外望高雄港與藍天。開閉幕全體大會。</figcaption>
+      </figure>
+      <figure>
+        <img class="ph" src="images/04-medium-room.jpg" alt="medium" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph4">中型會議室・課桌椅</b><code>images/04-medium-room.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap4"><b>304a／304b（約 240 人）</b>　下拉布幕＋課桌椅，適合需動手做的開發者 workshop。</figcaption>
+      </figure>
+      <figure>
+        <img class="ph" src="images/05-small-room.jpg" alt="small" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph5">小型會議室・分組</b><code>images/05-small-room.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap5"><b>302／303 系列（50–60 人）</b>　講台＋活動座椅，適合分組議程、講者休息或一對一。</figcaption>
+      </figure>
+    </div>
+
+    <div class="grid g3">
+      <figure>
+        <img class="ph" src="images/08-meeting-room.jpg" alt="meeting room" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph8">中型會議室・劇院式</b><code>images/08-meeting-room.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap8"><b>中型會議室（劇院式）</b>　環形排椅＋金屬講台、天花板投影機，適合技術主題演講或圓桌。</figcaption>
+      </figure>
+      <figure>
+        <img class="ph" src="images/06-vip-lounge.jpg" alt="vip lounge" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph7">貴賓休息室</b><code>images/06-vip-lounge.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap7"><b>貴賓休息室</b>　設計感沙發交誼區，柔和照明，適合講者與貴賓休憩、接待。</figcaption>
+      </figure>
+      <figure>
+        <img class="ph" src="images/07-corridor-signage.jpg" alt="corridor signage" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph6">走廊・門口電子看板</b><code>images/07-corridor-signage.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap6"><b>三樓走廊・門口電子看板</b>　各會議室門口設電子螢幕，可顯示當前場次主題，利於多軌指引與贊助露出。</figcaption>
+      </figure>
+    </div>
+
+    <h3 style="margin:38px 0 16px;font-size:18px" data-i18n="fp_h">🗺️ 三樓場地平面圖</h3>
+    <figure>
+      <img class="ph" src="images/floor-plan.jpg" alt="3F floor plan" style="aspect-ratio:auto;background:#fff;padding:8px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="photo-slot"><span class="pin">🗺️</span><b data-i18n="sp_fp">三樓平面圖（301 大會堂・302/303/304 會議室・305 海景宴會廳・貴賓室）</b><code>images/floor-plan.jpg</code></div>
+      <figcaption data-i18n-html="fp_cap"><b>高雄展覽館 3F 平面圖</b>　東西兩側空橋入口；301 大會堂（含舞台）位於東側，中央為 302／303／304 系列會議室，西側為 305 海景宴會廳與貴賓室。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- FACILITY -->
+<section id="facility">
+  <div class="wrap">
+    <span class="sec-tag" data-i18n="fa_tag">Facilities</span>
+    <h2 data-i18n="fa_h2">設備總覽</h2>
+    <p class="sec-intro" data-i18n="fa_intro">主廳與會議室皆內建以下設備，部分項目可省去外租成本（仍以場地正式報價為準）。</p>
+    <div class="grid g3">
+      <div class="card"><div class="ico">📶</div><h3 data-i18n="fa_net_t">全館高速無線網路</h3><p data-i18n="fa_net_d">台灣首座 5G 專頻專網智慧場館（SA 獨立組網），全館覆蓋高速無線網路，具大連結、低延遲特性，適合千人同時連線與動手做工作坊。實際頻寬、併發上限與是否計費以場地方報價為準。</p></div>
+      <div class="card"><div class="ico">📽️</div><h3 data-i18n="fa_c1t">投影 / 布幕</h3><p data-i18n="fa_c1d">主廳雙投影布幕；中小型會議室各配下拉式布幕與單槍投影機。</p></div>
+      <div class="card"><div class="ico">💡</div><h3 data-i18n="fa_c2t">舞台燈光</h3><p data-i18n="fa_c2d">主廳具桁架燈光、軌道燈與電腦燈，可營造大會與晚會氛圍。</p></div>
+      <div class="card"><div class="ico">🔊</div><h3 data-i18n="fa_c3t">音響系統</h3><p data-i18n="fa_c3d">懸吊式喇叭與舞台音響，覆蓋大空間，可搭配無線麥克風。</p></div>
+      <div class="card"><div class="ico">🪧</div><h3 data-i18n="fa_c4t">門口電子看板</h3><p data-i18n="fa_c4d">各室門口螢幕可顯示場次主題，利於多軌指引與贊助露出。</p></div>
+      <div class="card"><div class="ico">☕</div><h3 data-i18n="fa_c5t">貴賓室・咖啡</h3><p data-i18n="fa_c5d">貴賓休息室，備咖啡豆可現場沖泡，供講者與貴賓接待。</p></div>
+      <div class="card"><div class="ico">🪑</div><h3 data-i18n="fa_c6t">彈性桌椅</h3><p data-i18n="fa_c6d">劇院式、課桌椅、ㄇ字會議等多種排法，依議程自由切換。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COST -->
+<section id="cost" style="background:#F4ECDD">
+  <div class="wrap">
+    <span class="sec-tag" data-i18n="co_tag">Budget</span>
+    <h2 data-i18n="co_h2">費用方案</h2>
+    <p class="sec-intro" data-i18n="co_intro">以下為目前蒐集到的場地報價（一天＝上午 8:00–12:00、下午 13:00–17:00 兩個時段）。下表「整天費用」為各會議室租借＋清潔費的未稅金額；方案總價另加投影／配電並外加 5% 營業稅，同時以新台幣與美金呈現。</p>
+
+    <h3 style="margin:8px 0 14px;font-size:18px" data-i18n="co_tbl_h">各會議室容量與整天費用（含租借＋清潔・未稅）</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="co_th1">會議室</th>
+            <th data-i18n="co_th2">定位</th>
+            <th class="num" data-i18n="co_th3">可容納人數</th>
+            <th class="num" data-i18n="co_th4">整天費用（未稅）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>301</td><td><span class="pill main" data-i18n="pl_main">主廳</span></td><td class="num">1,000</td><td class="num">484,000</td></tr>
+          <tr><td>301a</td><td><span class="pill main" data-i18n="pl_large">大型</span></td><td class="num">600</td><td class="num">288,000</td></tr>
+          <tr><td>304a</td><td><span class="pill mid" data-i18n="pl_mid">中型</span></td><td class="num">240</td><td class="num">142,800</td></tr>
+          <tr><td>304b</td><td><span class="pill mid" data-i18n="pl_mid2">中型</span></td><td class="num">240</td><td class="num">142,800</td></tr>
+          <tr><td>302a</td><td><span class="pill small" data-i18n="pl_small">小型</span></td><td class="num">60</td><td class="num">28,600</td></tr>
+          <tr><td>302b</td><td><span class="pill small" data-i18n="pl_small2">小型</span></td><td class="num">60</td><td class="num">28,600</td></tr>
+          <tr><td>302e</td><td><span class="pill small" data-i18n="pl_small3">小型</span></td><td class="num">50</td><td class="num">19,400</td></tr>
+          <tr><td>303a</td><td><span class="pill small" data-i18n="pl_small4">小型</span></td><td class="num">60</td><td class="num">28,600</td></tr>
+          <tr><td>303b</td><td><span class="pill small" data-i18n="pl_small5">小型</span></td><td class="num">60</td><td class="num">28,600</td></tr>
+          <tr><td>303e</td><td><span class="pill small" data-i18n="pl_small6">小型</span></td><td class="num">50</td><td class="num">19,400</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td colspan="2" data-i18n="co_tfoot1">301＋301a 合計</td><td class="num" data-i18n="co_tfoot2">1,600 席</td><td class="num">772,000</td></tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div style="margin-top:34px">
+      <div class="plan rec">
+        <span class="badge" data-i18n="planA_badge">★ 建議場地配置（1,000 人大會）</span>
+        <h3 data-i18n="planA_title">301 大會堂＋301a：主場＋大型分軌</h3>
+        <div class="price">NT$ 849,450 <small data-i18n="per_incl">/ 整天・含稅</small></div>
+        <div class="price-usd" data-i18n="planA_usd">≈ US$ 26,100</div>
+        <p style="color:var(--ink-soft);font-size:14px" data-i18n="planA_desc">301 大會堂（1,000 席）作開場主場，301a（600 席）作大型分軌或交流宴會，兩廳合計 1,600 席，容納千人開閉幕並保留一條大型平行軌。</p>
+        <ul>
+          <li data-i18n="planA_li1">主場：301 大會堂 1,000 席　大型分軌：301a 600 席</li>
+          <li data-i18n="planA_li2">301＋301a 整天費用（租借＋清潔）：484,000＋288,000 ＝ 772,000</li>
+          <li data-i18n="planA_li3">投影機 32,000 ＋ 設備配電 5,000 ＝ 未稅 809,000</li>
+          <li data-i18n-html="planA_li4">＋5% 稅 ＝ <b>含稅約 NT$849,450（≈US$26,100）</b></li>
+        </ul>
+        <div class="note" style="margin-top:18px" data-i18n-html="planA_note"><b>說明：</b>標示總價已含 5% 營業稅；未含進出場費與保全費（場地另計）。如需更多分軌，可再加租 302／303／304 系列會議室。</div>
+      </div>
+    </div>
+
+    <div class="note" data-i18n-html="co_note"><b>待確認事項：</b>① 明細表為未稅報價，方案總價已外加 5% 營業稅；② 進出場費用與保全費尚未列入（場地另計）；③ 半天（單時段）可使租借費約減半；④ 美金金額以匯率約 1 USD ≈ 32.5 TWD 換算，僅供參考；⑤ 確切活動日期確認後場地方才提供正式報價。</div>
+  </div>
+</section>
+
+<!-- TRAVEL -->
+<section id="travel" style="background:#F4ECDD">
+  <div class="wrap">
+    <span class="sec-tag" data-i18n="tr_tag">Getting here</span>
+    <h2 data-i18n="tr_h2">交通與位置</h2>
+
+    <div class="geo">
+      <h3 data-i18n="geo_h">📍 高雄在哪裡？</h3>
+      <p data-i18n="geo_d">高雄是台灣第二大城、位於台灣本島最南端的港灣城市，是南台灣的經濟與航運中心。坐擁台灣最大的國際商港與高雄國際機場，氣候全年溫暖、冬季尤其陽光充足，自亞洲多數主要城市均有直飛或便捷轉乘。</p>
+      <div class="geofacts">
+        <span><b data-i18n="geo_f1">台灣第二大城</b></span>
+        <span><b data-i18n="geo_f2">台灣南部・港都</b></span>
+        <span><b data-i18n="geo_f3">距台北高鐵約 1.5–2 小時</b></span>
+        <span><b data-i18n="geo_f4">冬季溫暖晴朗</b></span>
+        <span>🌡️ <b data-i18n="geo_f5">12 月均溫約 19–27°C</b></span>
+      </div>
+    </div>
+
+    <p class="sec-intro" data-i18n="tr_intro">與會者來自台灣、新加坡、日本、美國、韓國等地。場地位於高雄市前鎮區成功二路 39 號，緊鄰機場、高鐵、捷運與輕軌，國際與會者抵達便利。</p>
+
+    <div class="map-frame">
+      <iframe src="https://www.google.com/maps?q=Kaohsiung+Exhibition+Center&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kaohsiung Exhibition Center"></iframe>
+    </div>
+    <p style="text-align:center;margin:14px 0 40px">
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Kaohsiung+Exhibition+Center" target="_blank" rel="noopener" data-i18n="tr_btn">在 Google 地圖開啟 ↗</a>
+    </p>
+
+    <h3 style="font-size:18px;margin-bottom:16px" data-i18n="tr_transport_h">交通方式</h3>
+    <div class="grid g3" style="margin-bottom:18px">
+      <div class="card"><div class="ico">✈️</div><h3 data-i18n="tr_t1t">高雄國際機場 (KHH)</h3><p data-i18n="tr_t1d">高雄小港機場搭捷運紅線直達三多商圈站，全程約 15–20 分鐘。新加坡、日本、韓國等有直飛航班。</p></div>
+      <div class="card"><div class="ico">🌏</div><h3 data-i18n="tr_t2t">國際線轉乘</h3><p data-i18n="tr_t2d">美國等長程線可經台北桃園 (TPE) 轉高鐵南下（約 1.5–2 小時），或經香港／東京轉機直飛高雄。</p></div>
+      <div class="card"><div class="ico">🚄</div><h3 data-i18n="tr_t3t">高鐵 HSR</h3><p data-i18n="tr_t3d">高鐵「左營站」轉捷運紅線至 R8 三多商圈站，或計程車約 20–25 分鐘抵達。</p></div>
+      <div class="card"><div class="ico">🚇</div><h3 data-i18n="tr_t4t">捷運 MRT</h3><p data-i18n="tr_t4d">捷運紅線 R8 三多商圈站，2 號出口沿新光路／成功路步行約 10–15 分鐘。</p></div>
+      <div class="card"><div class="ico">🚊</div><h3 data-i18n="tr_t5t">輕軌 LRT</h3><p data-i18n="tr_t5d">環狀輕軌 C8 高雄展覽館站，下車即達、步行約 7 分鐘，最靠近場館。</p></div>
+      <div class="card"><div class="ico">🅿️</div><h3 data-i18n="tr_t6t">停車 Parking</h3><p data-i18n="tr_t6d">場館設地下停車場約 400 席，建議多搭乘大眾運輸。</p></div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b data-i18n="ft_line1">Ship with Claude 2026 · 高雄場地提案</b><br>
+    <span data-i18n="ft_line2">高雄展覽館 3F ｜ 目標 1,000 人 ｜ 2026/12/5（六）</span><br>
+    <span style="opacity:.6" data-i18n="ft_line3">資料整理：提案用途・費用為含稅估算</span><br>
+    <a class="venue-choose-foot" href="index.html" data-i18n="venue_choose">← 選擇活動形式</a>
+    <a class="venue-alt-foot" href="ntu.html" data-i18n="venue_alt">其他候選場地：台大博雅教學館 ↗</a>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

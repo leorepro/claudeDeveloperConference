@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#1A1714">
-<title>Claude Builder Day 2026 · 高雄展覽館 場地提案</title>
-<meta name="description" content="Claude Builder Day 2026 高雄展覽館場地規劃提案：空間、設備、費用方案、議程與交通住宿。">
+<title>Ship with Claude 2026 · Venue Proposals</title>
+<meta name="description" content="Ship with Claude 2026 — choose your event format: a premium flagship conference at Kaohsiung Exhibition Center, or a community-style gathering at NTU Boya Teaching Building.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
@@ -16,529 +16,133 @@
 </head>
 <body>
 
-<nav class="topnav" id="top">
-  <div class="wrap topnav-inner">
-    <a class="brand" href="#top">Claude Builder Day</a>
-    <div class="navlinks" id="navlinks">
-      <a href="#why" data-i18n="toc1">為何選此場地</a>
-      <a href="#spaces" data-i18n="toc2">空間介紹</a>
-      <a href="#facility" data-i18n="toc3">設備總覽</a>
-      <a href="#cost" data-i18n="toc4">費用方案</a>
-      <a href="#agenda" data-i18n="toc5">議程配置</a>
-      <a href="#travel" data-i18n="toc6">交通與住宿</a>
-      <a href="#timeline" data-i18n="toc_tl">活動時程</a>
-      <a href="#next" data-i18n="toc7">下一步</a>
-    </div>
-    <div class="langbar">
-      <button class="langbtn" data-l="zh" onclick="setLang('zh')"><span class="lg-full">繁中</span><span class="lg-mini">繁</span></button>
-      <button class="langbtn" data-l="en" onclick="setLang('en')"><span class="lg-full">EN</span><span class="lg-mini">EN</span></button>
-      <button class="langbtn" data-l="ja" onclick="setLang('ja')"><span class="lg-full">日本語</span><span class="lg-mini">日</span></button>
-      <button class="langbtn" data-l="ko" onclick="setLang('ko')"><span class="lg-full">한국어</span><span class="lg-mini">한</span></button>
-    </div>
-    <button class="navtoggle" id="navToggle" aria-label="開啟選單" aria-controls="navlinks" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+<div class="chooser">
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-bg"></div>
-  <div class="wrap">
-    <span class="eyebrow" data-i18n="eyebrow">場地提案 · Venue Proposal</span>
-    <h1 data-i18n-html="h1">Claude Builder Day 2026<br><span>高雄展覽館</span> 場地規劃提案</h1>
-    <p class="lead" data-i18n="lead">為 2026/12/12（週六）、預估 1,000 人規模的 Claude Builder Day，提案以高雄展覽館作為主辦場地。</p>
+  <nav class="topnav" id="top">
+    <div class="wrap topnav-inner">
+      <a class="brand" href="#top">Ship with Claude</a>
+      <div style="flex:1 1 auto"></div>
+      <div class="langbar">
+        <button class="langbtn" data-l="en" onclick="setLang('en')"><span class="lg-full">EN</span><span class="lg-mini">EN</span></button>
+        <button class="langbtn" data-l="ja" onclick="setLang('ja')"><span class="lg-full">日本語</span><span class="lg-mini">日</span></button>
+        <button class="langbtn" data-l="zh" onclick="setLang('zh')"><span class="lg-full">繁中</span><span class="lg-mini">繁</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="chooser-main">
+    <span class="eyebrow" data-i18n="eyebrow">Venue Proposal</span>
+    <h1 data-i18n-html="h1">Ship with Claude 2026<br>Two <span>venue proposals</span></h1>
+    <p class="chooser-lead" data-i18n="lead">For Ship with Claude on Dec 5, 2026 (Sat), ~1,000 attendees — two venue options are proposed below. Select one to view its full proposal.</p>
+
     <div class="countdown" id="countdown" aria-live="polite">
-      <span class="cd-label" data-i18n="cd_label">距離活動開幕還有</span>
+      <span class="cd-label" data-i18n="cd_label">Until the event</span>
       <div class="cd-units">
-        <div class="cd-unit"><b id="cdD">--</b><small data-i18n="cd_d">天</small></div>
-        <div class="cd-unit"><b id="cdH">--</b><small data-i18n="cd_h">時</small></div>
-        <div class="cd-unit"><b id="cdM">--</b><small data-i18n="cd_m">分</small></div>
-        <div class="cd-unit"><b id="cdS">--</b><small data-i18n="cd_s">秒</small></div>
-      </div>
-    </div>
-    <div class="facts">
-      <div class="fact"><b data-i18n="f1v">1,000 人</b><small data-i18n="f1l">目標與會規模</small></div>
-      <div class="fact"><b data-i18n="f2v">2026/12/12（六）</b><small data-i18n="f2l">活動日期</small></div>
-      <div class="fact"><b data-i18n="f3v">高雄</b><small data-i18n="f3l">高雄展覽館 3F</small></div>
-      <div class="fact"><b data-i18n="f4v">1 天</b><small data-i18n="f4l">兩個時段（上午＋下午）</small></div>
-    </div>
-    <nav class="toc">
-      <a href="#why" data-i18n="toc1">為何選此場地</a>
-      <a href="#spaces" data-i18n="toc2">空間介紹</a>
-      <a href="#facility" data-i18n="toc3">設備總覽</a>
-      <a href="#cost" data-i18n="toc4">費用方案</a>
-      <a href="#agenda" data-i18n="toc5">議程配置</a>
-      <a href="#travel" data-i18n="toc6">交通與住宿</a>
-      <a href="#timeline" data-i18n="toc_tl">活動時程</a>
-      <a href="#next" data-i18n="toc7">下一步</a>
-    </nav>
-  </div>
-</header>
-
-<!-- WHY -->
-<section id="why">
-  <div class="wrap">
-    <span class="sec-tag" data-i18n="why_tag">Why this venue</span>
-    <h2 data-i18n="why_h2">為什麼選高雄展覽館</h2>
-    <p class="sec-intro" data-i18n="why_intro">場地具備容納千人的主廳、可彈性分割的多軌會議室，以及完整舞台燈光音響，一站滿足主場演講、分組工作坊與交流晚宴。</p>
-    <div class="grid g3">
-      <div class="card"><div class="ico">🏛️</div><h3 data-i18n="why_c1t">千人主廳</h3><p data-i18n="why_c1d">301 主廳可容納 1,000 人，劇院式座位、雙投影布幕、視線無死角。</p></div>
-      <div class="card"><div class="ico">🧩</div><h3 data-i18n="why_c2t">多軌可彈性分割</h3><p data-i18n="why_c2d">同層 302／303／304 系列會議室可作分組議程與工作坊，與主場同層串連。</p></div>
-      <div class="card"><div class="ico">🎚️</div><h3 data-i18n="why_c3t">專業舞台設備</h3><p data-i18n="why_c3d">主廳具桁架燈光、軌道聚光燈與懸吊音響，演出等級，降低外租成本。</p></div>
-      <div class="card"><div class="ico">🌊</div><h3 data-i18n="why_c4t">港景落地窗</h3><p data-i18n="why_c4d">主廳整面落地玻璃帷幕，外望高雄港與市景，交流時段的天然亮點。</p></div>
-      <div class="card"><div class="ico">📺</div><h3 data-i18n="why_c5t">門口電子看板</h3><p data-i18n="why_c5d">各會議室門口電子螢幕可顯示當前場次主題，方便多軌指引與品牌露出。</p></div>
-      <div class="card"><div class="ico">☕</div><h3 data-i18n="why_c6t">貴賓休息室</h3><p data-i18n="why_c6d">提供貴賓休息空間並備咖啡豆可現場沖泡，適合講者與貴賓接待。</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- SPACES -->
-<section id="spaces" style="background:#F4ECDD">
-  <div class="wrap">
-    <span class="sec-tag" data-i18n="sp_tag">Spaces</span>
-    <h2 data-i18n="sp_h2">空間介紹</h2>
-    <p class="sec-intro" data-i18n="sp_intro">以下為各空間實地場勘照片與用途建議。</p>
-
-    <div class="grid g2" style="margin-bottom:22px">
-      <figure>
-        <img class="ph" src="images/01-main-hall-theater.jpg" alt="301" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph1">主廳 301・劇院式</b><code>images/01-main-hall-theater.jpg</code></div>
-        <figcaption data-i18n-html="sp_cap1"><b>301 主廳（劇院式）</b>　可容 1,000 人，雙投影布幕、舞台燈光、後方落地窗港景。大會主場 Keynote 用。</figcaption>
-      </figure>
-      <figure>
-        <img class="ph" src="images/02-main-hall-event.jpg" alt="301 event" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph2">主廳 301・活動實況</b><code>images/02-main-hall-event.jpg</code></div>
-        <figcaption data-i18n-html="sp_cap2"><b>301 主廳（活動模式）</b>　可改為宴會＋展攤＋舞台配置，適合大會晚間交流。</figcaption>
-      </figure>
-    </div>
-
-    <div class="grid g3" style="margin-bottom:22px">
-      <figure>
-        <img class="ph" src="images/03-hall-harbor-view.jpg" alt="harbor" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph3">大廳・港景落地窗</b><code>images/03-hall-harbor-view.jpg</code></div>
-        <figcaption data-i18n-html="sp_cap3"><b>主廳・港景落地窗</b>　整排劇院座椅、雙布幕，外望高雄港與藍天。開閉幕全體大會。</figcaption>
-      </figure>
-      <figure>
-        <img class="ph" src="images/04-medium-room.jpg" alt="medium" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph4">中型會議室・課桌椅</b><code>images/04-medium-room.jpg</code></div>
-        <figcaption data-i18n-html="sp_cap4"><b>304a／304b（約 240 人）</b>　下拉布幕＋課桌椅，適合需動手做的開發者 workshop。</figcaption>
-      </figure>
-      <figure>
-        <img class="ph" src="images/05-small-room.jpg" alt="small" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph5">小型會議室・分組</b><code>images/05-small-room.jpg</code></div>
-        <figcaption data-i18n-html="sp_cap5"><b>302／303 系列（50–60 人）</b>　講台＋活動座椅，適合分組議程、講者休息或一對一。</figcaption>
-      </figure>
-    </div>
-
-    <div class="grid g3">
-      <figure>
-        <img class="ph" src="images/08-meeting-room.jpg" alt="meeting room" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph8">中型會議室・劇院式</b><code>images/08-meeting-room.jpg</code></div>
-        <figcaption data-i18n-html="sp_cap8"><b>中型會議室（劇院式）</b>　環形排椅＋金屬講台、天花板投影機，適合技術主題演講或圓桌。</figcaption>
-      </figure>
-      <figure>
-        <img class="ph" src="images/06-vip-lounge.jpg" alt="vip lounge" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph7">貴賓休息室</b><code>images/06-vip-lounge.jpg</code></div>
-        <figcaption data-i18n-html="sp_cap7"><b>貴賓休息室</b>　設計感沙發交誼區，柔和照明，適合講者與貴賓休憩、接待。</figcaption>
-      </figure>
-      <figure>
-        <img class="ph" src="images/07-corridor-signage.jpg" alt="corridor signage" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph6">走廊・門口電子看板</b><code>images/07-corridor-signage.jpg</code></div>
-        <figcaption data-i18n-html="sp_cap6"><b>三樓走廊・門口電子看板</b>　各會議室門口設電子螢幕，可顯示當前場次主題，利於多軌指引與贊助露出。</figcaption>
-      </figure>
-    </div>
-
-    <h3 style="margin:38px 0 16px;font-size:18px" data-i18n="fp_h">🗺️ 三樓場地平面圖</h3>
-    <figure>
-      <img class="ph" src="images/floor-plan.jpg" alt="3F floor plan" style="aspect-ratio:auto;background:#fff;padding:8px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="photo-slot"><span class="pin">🗺️</span><b data-i18n="sp_fp">三樓平面圖（301 大會堂・302/303/304 會議室・305 海景宴會廳・貴賓室）</b><code>images/floor-plan.jpg</code></div>
-      <figcaption data-i18n-html="fp_cap"><b>高雄展覽館 3F 平面圖</b>　東西兩側空橋入口；301 大會堂（含舞台）位於東側，中央為 302／303／304 系列會議室，西側為 305 海景宴會廳與貴賓室。</figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- HALL CAROUSEL -->
-<section id="hall">
-  <div class="wrap">
-    <span class="sec-tag">Grand Hall 301</span>
-    <h2 data-i18n="hall_h">🎦 301 大會堂・實景輪播</h2>
-    <p class="sec-intro" data-i18n="hall_intro">高雄展覽館 301 大會堂多角度實景，可左右切換瀏覽。</p>
-    <div class="carousel" id="hallCarousel">
-      <div class="carousel-track">
-        <div class="carousel-slide"><img src="images/hall-1.jpg" alt="301 大會堂 全景" loading="lazy"></div>
-        <div class="carousel-slide"><img src="images/hall-2.jpg" alt="301 大會堂 劇院式" loading="lazy"></div>
-        <div class="carousel-slide"><img src="images/hall-3.jpg" alt="301 大會堂" loading="lazy"></div>
-        <div class="carousel-slide"><img src="images/hall-4.jpg" alt="301 大會堂" loading="lazy"></div>
-        <div class="carousel-slide"><img src="images/hall-5.jpg" alt="301 大會堂" loading="lazy"></div>
-        <div class="carousel-slide"><img src="images/hall-6.jpg" alt="301 大會堂" loading="lazy"></div>
-        <div class="carousel-slide"><img src="images/hall-7.jpg" alt="301 大會堂" loading="lazy"></div>
-        <div class="carousel-slide"><img src="images/hall-8.jpg" alt="301 大會堂" loading="lazy"></div>
-      </div>
-      <span class="carousel-count" id="hallCount">1 / 8</span>
-      <button class="carousel-btn prev" aria-label="上一張">‹</button>
-      <button class="carousel-btn next" aria-label="下一張">›</button>
-      <div class="carousel-dots"></div>
-    </div>
-    <p style="font-size:12px;color:var(--ink-soft);margin-top:12px;text-align:right" data-i18n="hall_src">照片來源：高雄展覽館官方網站 kecc.com.tw</p>
-  </div>
-</section>
-
-<!-- FACILITY -->
-<section id="facility">
-  <div class="wrap">
-    <span class="sec-tag" data-i18n="fa_tag">Facilities</span>
-    <h2 data-i18n="fa_h2">設備總覽</h2>
-    <p class="sec-intro" data-i18n="fa_intro">主廳與會議室皆內建以下設備，部分項目可省去外租成本（仍以場地正式報價為準）。</p>
-    <div class="grid g3">
-      <div class="card"><div class="ico">📶</div><h3 data-i18n="fa_net_t">全館高速無線網路</h3><p data-i18n="fa_net_d">台灣首座 5G 專頻專網智慧場館（SA 獨立組網），全館覆蓋高速無線網路，具大連結、低延遲特性，適合千人同時連線與動手做工作坊。實際頻寬、併發上限與是否計費以場地方報價為準。</p></div>
-      <div class="card"><div class="ico">📽️</div><h3 data-i18n="fa_c1t">投影 / 布幕</h3><p data-i18n="fa_c1d">主廳雙投影布幕；中小型會議室各配下拉式布幕與單槍投影機。</p></div>
-      <div class="card"><div class="ico">💡</div><h3 data-i18n="fa_c2t">舞台燈光</h3><p data-i18n="fa_c2d">主廳具桁架燈光、軌道燈與電腦燈，可營造大會與晚會氛圍。</p></div>
-      <div class="card"><div class="ico">🔊</div><h3 data-i18n="fa_c3t">音響系統</h3><p data-i18n="fa_c3d">懸吊式喇叭與舞台音響，覆蓋大空間，可搭配無線麥克風。</p></div>
-      <div class="card"><div class="ico">🪧</div><h3 data-i18n="fa_c4t">門口電子看板</h3><p data-i18n="fa_c4d">各室門口螢幕可顯示場次主題，利於多軌指引與贊助露出。</p></div>
-      <div class="card"><div class="ico">☕</div><h3 data-i18n="fa_c5t">貴賓室・咖啡</h3><p data-i18n="fa_c5d">貴賓休息室，備咖啡豆可現場沖泡，供講者與貴賓接待。</p></div>
-      <div class="card"><div class="ico">🪑</div><h3 data-i18n="fa_c6t">彈性桌椅</h3><p data-i18n="fa_c6d">劇院式、課桌椅、ㄇ字會議等多種排法，依議程自由切換。</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- COST -->
-<section id="cost" style="background:#F4ECDD">
-  <div class="wrap">
-    <span class="sec-tag" data-i18n="co_tag">Budget</span>
-    <h2 data-i18n="co_h2">費用方案</h2>
-    <p class="sec-intro" data-i18n="co_intro">以下為目前蒐集到的場地報價（一天＝上午 8:00–12:00、下午 13:00–17:00 兩個時段）。下方明細表為場地原始未稅報價；方案總價一律外加 5% 營業稅，並同時以新台幣與美金呈現。</p>
-
-    <h3 style="margin:8px 0 14px;font-size:18px" data-i18n="co_tbl_h">各會議室費用對照（整天・兩個時段・未稅）</h3>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th data-i18n="co_th1">會議室</th>
-            <th data-i18n="co_th2">定位</th>
-            <th class="num" data-i18n="co_th3">可容納人數</th>
-            <th class="num" data-i18n="co_th4">單時段租借</th>
-            <th class="num" data-i18n="co_th5">整天（兩時段）</th>
-            <th class="num" data-i18n="co_th6">清潔費</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>301</td><td><span class="pill main" data-i18n="pl_main">主廳</span></td><td class="num">1,000</td><td class="num">230,000</td><td class="num">460,000</td><td class="num">24,000</td></tr>
-          <tr><td>301a</td><td><span class="pill main" data-i18n="pl_large">大型</span></td><td class="num">600</td><td class="num">138,000</td><td class="num">276,000</td><td class="num">12,000</td></tr>
-          <tr><td>304a</td><td><span class="pill mid" data-i18n="pl_mid">中型</span></td><td class="num">240</td><td class="num">69,000</td><td class="num">138,000</td><td class="num">4,800</td></tr>
-          <tr><td>304b</td><td><span class="pill mid" data-i18n="pl_mid2">中型</span></td><td class="num">240</td><td class="num">69,000</td><td class="num">138,000</td><td class="num">4,800</td></tr>
-          <tr><td>302a</td><td><span class="pill small" data-i18n="pl_small">小型</span></td><td class="num">60</td><td class="num">13,800</td><td class="num">27,600</td><td class="num">1,000</td></tr>
-          <tr><td>302b</td><td><span class="pill small" data-i18n="pl_small2">小型</span></td><td class="num">60</td><td class="num">13,800</td><td class="num">27,600</td><td class="num">1,000</td></tr>
-          <tr><td>302e</td><td><span class="pill small" data-i18n="pl_small3">小型</span></td><td class="num">50</td><td class="num">9,200</td><td class="num">18,400</td><td class="num">1,000</td></tr>
-          <tr><td>303a</td><td><span class="pill small" data-i18n="pl_small4">小型</span></td><td class="num">60</td><td class="num">13,800</td><td class="num">27,600</td><td class="num">1,000</td></tr>
-          <tr><td>303b</td><td><span class="pill small" data-i18n="pl_small5">小型</span></td><td class="num">60</td><td class="num">13,800</td><td class="num">27,600</td><td class="num">1,000</td></tr>
-          <tr><td>303e</td><td><span class="pill small" data-i18n="pl_small6">小型</span></td><td class="num">50</td><td class="num">9,200</td><td class="num">18,400</td><td class="num">1,000</td></tr>
-        </tbody>
-        <tfoot>
-          <tr><td colspan="2" data-i18n="co_tfoot1">全層三樓全包</td><td class="num" data-i18n="co_tfoot2">約 2,420</td><td class="num">—</td><td class="num">1,159,200</td><td class="num">51,600</td></tr>
-        </tfoot>
-      </table>
-    </div>
-
-    <div class="grid g2" style="margin-top:34px;align-items:start">
-      <div class="plan rec">
-        <span class="badge" data-i18n="planA_badge">★ 建議方案（1,000 人多軌大會）</span>
-        <h3 data-i18n="planA_title">方案 A：全層三樓全包</h3>
-        <div class="price">NT$ 1,310,190 <small data-i18n="per_incl">/ 整天・含稅</small></div>
-        <div class="price-usd" data-i18n="planA_usd">≈ US$ 40,300</div>
-        <p style="color:var(--ink-soft);font-size:14px" data-i18n="planA_desc">主廳 301 作開場主場，302／303／304 同步開 5–6 軌分組議程與工作坊，最貼合開發者大會規格。</p>
-        <ul>
-          <li data-i18n="planA_li1">會議室租借（全層・兩時段）：1,159,200</li>
-          <li data-i18n="planA_li2">清潔費（全層）：51,600</li>
-          <li data-i18n="planA_li3">投影機：32,000　設備配電：5,000</li>
-          <li data-i18n-html="planA_li4">未稅小計 1,247,800 ＋ 5% 稅 ＝ <b>含稅 1,310,190（約 US$40,300）</b></li>
-        </ul>
-        <div class="note" style="margin-top:18px" data-i18n-html="planA_note"><b>說明：</b>標示總價已含 5% 營業稅；未含進出場費與保全費（場地另計）。</div>
-      </div>
-
-      <div class="plan">
-        <h3 data-i18n="planB_title">方案 B：僅租主廳 301</h3>
-        <div class="price">NT$ 547,050 <small data-i18n="per_incl2">/ 整天・含稅</small></div>
-        <div class="price-usd" data-i18n="planB_usd">≈ US$ 16,800</div>
-        <p style="color:var(--ink-soft);font-size:14px" data-i18n="planB_desc">單一千人主場、不開分軌時的精簡方案，預算大幅下降。</p>
-        <ul>
-          <li data-i18n="planB_li1">主廳 301 租借（兩時段）：460,000</li>
-          <li data-i18n="planB_li2">清潔費：24,000</li>
-          <li data-i18n="planB_li3">投影機 + 設備配電：37,000</li>
-          <li data-i18n-html="planB_li4">未稅小計 521,000 ＋ 5% 稅 ＝ <b>含稅 547,050（約 US$16,800）</b></li>
-        </ul>
-        <div class="note" style="margin-top:18px" data-i18n-html="planB_note"><b>說明：</b>本案僅單一主場，不含同步分軌議程。</div>
+        <div class="cd-unit"><b id="cdD">--</b><small data-i18n="cd_d">Days</small></div>
+        <div class="cd-unit"><b id="cdH">--</b><small data-i18n="cd_h">Hrs</small></div>
+        <div class="cd-unit"><b id="cdM">--</b><small data-i18n="cd_m">Min</small></div>
+        <div class="cd-unit"><b id="cdS">--</b><small data-i18n="cd_s">Sec</small></div>
       </div>
     </div>
 
-    <h3 style="margin:34px 0 14px;font-size:18px" data-i18n="bx_h">其他預留費用</h3>
-    <div class="grid g2" style="align-items:stretch">
-      <div class="card"><div class="ico">🍽️</div><h3 data-i18n="din_t">活動後晚餐聚會（約 30 人）</h3><p data-i18n="din_d">活動結束後團隊／講者聚餐，預估每人約 NT$1,200，預留 NT$36,000（約 US$1,100）。</p></div>
-      <div class="card"><div class="ico">🍰</div><h3 data-i18n="teaA_t">茶點方案①：10 萬（精簡）</h3><p data-i18n="teaA_d">1,000 人份茶歇，飲品＋基本點心，每人約 NT$100，預留 NT$100,000（約 US$3,100）。</p></div>
-      <div class="card"><div class="ico">🧁</div><h3 data-i18n="teaB_t">茶點方案②：20 萬（豐富）</h3><p data-i18n="teaB_d">1,000 人份上下午茶歇，甜點＋飲品更豐富，每人約 NT$200，預留 NT$200,000（約 US$6,200）。</p></div>
-      <div class="card"><div class="ico">🎁</div><h3 data-i18n="giftA_t">紀念品方案①：每人 NT$100（精簡禮包）</h3><p data-i18n="giftA_d">客製鑰匙圈＋貼紙組＋頸帶識別證，輕量好攜帶；1,000 份約 NT$100,000（約 US$3,100）。</p></div>
-      <div class="card"><div class="ico">🎀</div><h3 data-i18n="giftB_t">紀念品方案②：每人 NT$200（升級禮包）</h3><p data-i18n="giftB_d">帆布托特袋＋環保隨行杯＋客製鑰匙圈＋筆記本，質感與實用兼具；1,000 份約 NT$200,000（約 US$6,200）。</p></div>
-      <div class="card"><div class="ico">🎤</div><h3 data-i18n="host_t">主持人費用</h3><p data-i18n="host_d">全天專業／雙語主持，台灣行情約 NT$20,000–30,000，預留 NT$30,000（約 US$900）。</p></div>
-      <div class="card"><div class="ico">📷</div><h3 data-i18n="photo_t">攝影師費用</h3><p data-i18n="photo_d">全天活動攝影包套，台灣行情約 NT$12,000–28,000，預留 NT$30,000（約 US$900）含雙機／交通。</p></div>
-      <div class="card"><div class="ico">🎨</div><h3 data-i18n="deco_t">場地佈置費用</h3><p data-i18n="deco_d">主視覺背板、舞台、報到區、指標與動線佈置等，千人規模預留 NT$150,000（約 US$4,600）。</p></div>
-      <div class="card"><div class="ico">🧹</div><h3 data-i18n="clean_t">額外清潔費預留</h3><p data-i18n="clean_d">場地報價已含基本清潔，另預留加場清潔／垃圾清運 NT$20,000（約 US$600）。</p></div>
-      <div class="card"><div class="ico">🧾</div><h3 data-i18n="misc_t">雜支／預備金</h3><p data-i18n="misc_d">印刷布置、運費、志工餐點與臨時採購等，預留 NT$50,000（約 US$1,500）。</p></div>
-      <div class="card"><div class="ico">👥</div><h3 data-i18n="staff_t">現場人力／志工<span class="freepill" data-i18n="free_tag">NT$0</span></h3><p data-i18n="staff_d">現場報到、引導與支援以公開招募的免費志工為主，搭配內部團隊，無額外人力費用，預計 NT$0。</p></div>
-      <div class="card"><div class="ico">🖌️</div><h3 data-i18n="design_t">視覺設計／文宣印刷<span class="freepill" data-i18n="free_tag">NT$0</span></h3><p data-i18n="design_d">主視覺與素材由官方設計資源製作，預計不另製作實體印刷物（以數位為主），無委外費用，預計 NT$0。</p></div>
-      <div class="card"><div class="ico">📝</div><h3 data-i18n="reg_t">報名系統<span class="freepill" data-i18n="free_tag">NT$0</span></h3><p data-i18n="reg_d">沿用官方現有報名系統，無額外平台費用，預計 NT$0。</p></div>
-      <div class="card"><div class="ico">📣</div><h3 data-i18n="mkt_t">行銷宣傳<span class="freepill" data-i18n="free_tag">NT$0</span></h3><p data-i18n="mkt_d">透過推廣大使的個人社群與官方社群管道宣傳，預計 NT$0（如需付費投放再另編）。</p></div>
-      <div class="card" style="border:2px solid var(--accent)"><div class="ico">🧮</div><h3 data-i18n="tot_t">建議總預算（方案 A ＋ 全部項目）</h3><p data-i18n-html="tot_d">場地 1,310,190 ＋ 晚餐 36,000 ＋ 主持 30,000 ＋ 攝影 30,000 ＋ 佈置 150,000 ＋ 清潔預留 20,000 ＋ 雜支 50,000 ＋ 紀念品 100,000–200,000 ＋ 茶點 100,000–200,000 ＝ 約 <b>NT$1,846,190–2,026,190（約 US$56,800–62,300）</b>。</p></div>
-    </div>
-
-    <div class="calc-wide">
-    <h3 style="margin:34px 0 6px;font-size:18px" data-i18n="calc_h">🧮 預算試算器（勾選即時加總）</h3>
-    <p style="font-size:13px;color:var(--ink-soft);margin-bottom:16px" data-i18n="calc_sub">勾選你要的項目，下方即時顯示新台幣與美金總額（匯率約 1 USD ≈ 32.5 TWD）。</p>
-    <div class="calc card" id="budgetCalc">
-      <div class="calc-grid">
-        <div class="calc-group">
-          <div class="calc-gh" data-i18n="calc_g_venue">場地（擇一）</div>
-          <label><input type="radio" name="cVenue" value="1310190" checked><span data-i18n="calc_venueA">方案 A：全層三樓全包</span><span class="amt"><b>NT$1,310,190</b><i></i></span></label>
-          <label><input type="radio" name="cVenue" value="547050"><span data-i18n="calc_venueB">方案 B：僅主廳 301</span><span class="amt"><b>NT$547,050</b><i></i></span></label>
+    <div class="choices">
+      <a class="choice" href="kaohsiung.html">
+        <div class="choice-thumb" style="background-image:url('images/00-hero-kaohsiung.jpg')"></div>
+        <div class="choice-body">
+          <span class="choice-tag" data-i18n="tagA">Premium format</span>
+          <span class="choice-title" data-i18n="titleA">Kaohsiung Exhibition Center</span>
+          <span class="choice-desc" data-i18n="descA">A large exhibition hall for a polished, 1,000-person flagship conference.</span>
+          <span class="choice-cta" data-i18n="ctaA">View proposal →</span>
         </div>
-        <div class="calc-group">
-          <div class="calc-gh" data-i18n="calc_g_gift">紀念品（擇一）</div>
-          <label><input type="radio" name="cGift" value="0"><span data-i18n="calc_giftN">不含紀念品</span><span class="amt"><b>NT$0</b><i></i></span></label>
-          <label><input type="radio" name="cGift" value="100000" checked><span data-i18n="calc_giftA">方案①每人 NT$100</span><span class="amt"><b>NT$100,000</b><i></i></span></label>
-          <label><input type="radio" name="cGift" value="200000"><span data-i18n="calc_giftB">方案②每人 NT$200</span><span class="amt"><b>NT$200,000</b><i></i></span></label>
-          <div class="calc-gh" style="margin-top:18px" data-i18n="calc_g_tea">茶點／甜點（擇一）</div>
-          <label><input type="radio" name="cTea" value="0"><span data-i18n="calc_teaN">不含茶點</span><span class="amt"><b>NT$0</b><i></i></span></label>
-          <label><input type="radio" name="cTea" value="100000"><span data-i18n="calc_teaA">方案①（10 萬）</span><span class="amt"><b>NT$100,000</b><i></i></span></label>
-          <label><input type="radio" name="cTea" value="200000" checked><span data-i18n="calc_teaB">方案②（20 萬）</span><span class="amt"><b>NT$200,000</b><i></i></span></label>
+      </a>
+      <a class="choice" href="ntu.html">
+        <div class="choice-thumb" style="background-image:url('images/ntu/00-hero-ntu.jpg')"></div>
+        <div class="choice-body">
+          <span class="choice-tag" data-i18n="tagB">Community format</span>
+          <span class="choice-title" data-i18n="titleB">NTU Boya Teaching Building</span>
+          <span class="choice-desc" data-i18n="descB">A campus venue for a lighter, community-style gathering.</span>
+          <span class="choice-cta" data-i18n="ctaB">View proposal →</span>
         </div>
-        <div class="calc-group">
-          <div class="calc-gh" data-i18n="calc_g_extra">加購項目（可複選）</div>
-          <label><input type="checkbox" class="calc-opt" value="36000" checked><span data-i18n="calc_dinner">晚餐聚會</span><span class="amt"><b>NT$36,000</b><i></i></span></label>
-          <label><input type="checkbox" class="calc-opt" value="30000" checked><span data-i18n="calc_host">主持人</span><span class="amt"><b>NT$30,000</b><i></i></span></label>
-          <label><input type="checkbox" class="calc-opt" value="30000" checked><span data-i18n="calc_photo">攝影師</span><span class="amt"><b>NT$30,000</b><i></i></span></label>
-          <label><input type="checkbox" class="calc-opt" value="150000" checked><span data-i18n="calc_deco">場地佈置</span><span class="amt"><b>NT$150,000</b><i></i></span></label>
-          <label><input type="checkbox" class="calc-opt" value="20000" checked><span data-i18n="calc_clean">額外清潔預留</span><span class="amt"><b>NT$20,000</b><i></i></span></label>
-          <label><input type="checkbox" class="calc-opt" value="50000" checked><span data-i18n="calc_misc">雜支／預備金</span><span class="amt"><b>NT$50,000</b><i></i></span></label>
-        </div>
-        <div class="calc-group">
-          <div class="calc-gh" data-i18n="calc_g_free">預計免費（NT$0）</div>
-          <label><input type="checkbox" class="calc-opt" value="0" checked><span data-i18n="calc_staff">現場人力／志工</span><span class="amt"><b>NT$0</b><i></i></span></label>
-          <label><input type="checkbox" class="calc-opt" value="0" checked><span data-i18n="calc_design">視覺設計／印刷</span><span class="amt"><b>NT$0</b><i></i></span></label>
-          <label><input type="checkbox" class="calc-opt" value="0" checked><span data-i18n="calc_reg">報名系統</span><span class="amt"><b>NT$0</b><i></i></span></label>
-          <label><input type="checkbox" class="calc-opt" value="0" checked><span data-i18n="calc_mkt">行銷宣傳</span><span class="amt"><b>NT$0</b><i></i></span></label>
-        </div>
-      </div>
-      <div class="calc-total">
-        <span data-i18n="calc_total">預估總額</span>
-        <div class="calc-nums"><b id="calcTwd">NT$0</b><em id="calcUsd">≈ US$0</em></div>
-      </div>
+      </a>
     </div>
-    </div>
+  </main>
 
-    <h3 style="margin:34px 0 6px;font-size:18px" data-i18n="map_h">📊 預算佔比長條圖</h3>
-    <p style="font-size:13px;color:var(--ink-soft);margin-bottom:16px" data-i18n="map_sub">整條長條依各項目佔目前勾選總額的比例分段，段長越長、顏色越深代表佔比越大；下方圖例顯示金額與佔比。</p>
-    <div class="budget-map card" id="budgetMap" role="img" aria-label="預算佔比長條圖"></div>
+  <div class="chooser-foot" data-i18n="foot">Internal proposal · Ship with Claude 2026</div>
 
-    <div class="note" data-i18n-html="co_note"><b>待確認事項：</b>① 明細表為未稅報價，方案總價已外加 5% 營業稅；② 進出場費用與保全費尚未列入（場地另計）；③ 半天（單時段）可使租借費約減半；④ 美金金額以匯率約 1 USD ≈ 32.5 TWD 換算，僅供參考；⑤ 確切活動日期確認後場地方才提供正式報價。</div>
-  </div>
-</section>
+</div>
 
-<!-- AGENDA -->
-<section id="agenda">
-  <div class="wrap">
-    <span class="sec-tag" data-i18n="ag_tag">Suggested flow</span>
-    <h2 data-i18n="ag_h2">議程配置與分軌人數</h2>
+<script>
+// 選擇頁自帶迷你多語系（EN / 日本語 / 繁中，預設 EN），與內頁共用 localStorage.forumLang。
+const I18N_CHOOSE = {
+  en:{
+    eyebrow:"Venue Proposal",
+    h1:`Ship with Claude 2026<br>Two <span>venue proposals</span>`,
+    lead:"For Ship with Claude on Dec 5, 2026 (Sat), ~1,000 attendees — two venue options are proposed below. Select one to view its full proposal.",
+    cd_label:"Until the event",cd_d:"Days",cd_h:"Hrs",cd_m:"Min",cd_s:"Sec",
+    tagA:"Premium format",titleA:"Kaohsiung Exhibition Center",
+    descA:"A large exhibition hall for a polished, 1,000-person flagship conference.",ctaA:"View proposal →",
+    tagB:"Community format",titleB:"NTU Boya Teaching Building",
+    descB:"A campus venue for a lighter, community-style gathering.",ctaB:"View proposal →",
+    foot:"Internal proposal · Ship with Claude 2026"
+  },
+  ja:{
+    eyebrow:"会場提案",
+    h1:`Ship with Claude 2026<br><span>2つの会場提案</span>`,
+    lead:"2026/12/5（土）・約1,000人規模の Ship with Claude。以下の2つの会場案からお選びいただくと、詳細な提案を表示します。",
+    cd_label:"開催まで",cd_d:"日",cd_h:"時",cd_m:"分",cd_s:"秒",
+    tagA:"精緻フォーマット",titleA:"高雄エキシビションセンター",
+    descA:"千人規模の本格的なカンファレンス向け大型展示ホール。",ctaA:"提案を見る →",
+    tagB:"コミュニティフォーマット",titleB:"台湾大学 博雅教学館",
+    descB:"コミュニティ向けの軽やかな集まりに適したキャンパス会場。",ctaB:"提案を見る →",
+    foot:"社内提案 · Ship with Claude 2026"
+  },
+  zh:{
+    eyebrow:"場地提案",
+    h1:`Ship with Claude 2026<br>以下有<span>兩種場地提案</span>`,
+    lead:"為 2026/12/5（六）、預估 1,000 人規模的 Ship with Claude，以下提供兩個場地方案，選擇其一即可查看完整提案。",
+    cd_label:"距離活動開幕還有",cd_d:"天",cd_h:"時",cd_m:"分",cd_s:"秒",
+    tagA:"精緻形式",titleA:"高雄展覽館",
+    descA:"大型展館，適合千人規模、正式精緻的旗艦大會。",ctaA:"查看場地提案 →",
+    tagB:"一般社群形式",titleB:"台大博雅教學館",
+    descB:"校園場地，適合社群風格、輕量的聚會。",ctaB:"查看場地提案 →",
+    foot:"內部提案 · Ship with Claude 2026"
+  }
+};
 
-    <h3 style="font-size:18px;margin:14px 0 6px" data-i18n="grid_h">🕘 一日時程 × 分軌配置</h3>
-    <p style="font-size:13px;color:var(--ink-soft);margin-bottom:14px" data-i18n="grid_sub">縱軸＝時間（上午 → 下午）；橫軸＝各軌房間與人數上限。</p>
-    <div class="table-wrap">
-      <table class="grid-table">
-        <thead>
-          <tr>
-            <th data-i18n="grid_time">時間</th>
-            <th>301 <small data-i18n="grid_role">主軌</small></th>
-            <th>304a</th>
-            <th>304b</th>
-            <th>302a</th>
-            <th>303a</th>
-            <th>303b</th>
-            <th class="rest-h">301a</th>
-            <th class="rest-h">302b</th>
-            <th class="rest-h">302e</th>
-            <th class="rest-h">303e</th>
-          </tr>
-          <tr class="cap-row">
-            <th class="cap-label" data-i18n="grid_cap">人數上限</th>
-            <th>≤1,000</th>
-            <th>≤240</th>
-            <th>≤240</th>
-            <th>≤60</th>
-            <th>≤60</th>
-            <th>≤60</th>
-            <th class="rest-h">≤600</th>
-            <th class="rest-h">≤60</th>
-            <th class="rest-h">≤50</th>
-            <th class="rest-h">≤50</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="tcell">09:00–10:00</td><td class="span" colspan="10" data-i18n="g_reg">報到・迎賓咖啡（3F 大廳・休息區）</td></tr>
-          <tr><td class="tcell">10:00–10:50</td><td class="span hl" colspan="10" data-i18n="g_key">開場 Keynote・開幕合影・全體 1,000 人（301 大會堂全廳）</td></tr>
-          <tr class="rnd"><td class="tcell">11:00–11:45<small data-i18n="g_b1">第 1 輪</small></td><td data-i18n="trk_t1">技術主題演講</td><td data-i18n="trk_t2">工作坊 / Lab</td><td data-i18n="trk_t2b">工作坊 / Lab</td><td data-i18n="trk_t4">深度技術 / 圓桌</td><td data-i18n="trk_t5">社群分享</td><td data-i18n="trk_t6">新手 / Demo</td><td class="rest" data-i18n="trk_x1">交流・洽談區</td><td class="rest" data-i18n="trk_x2">休息區</td><td class="rest" data-i18n="trk_x4">講者休息室</td><td class="rest" data-i18n="trk_x3">靜音休息室</td></tr>
-          <tr><td class="tcell">12:00–13:00</td><td class="span" colspan="10" data-i18n="g_lunch">午餐・交流・展攤（全層・休息區開放）</td></tr>
-          <tr class="rnd"><td class="tcell">13:00–13:45<small data-i18n="g_b2">第 2 輪</small></td><td data-i18n="trk_t1">技術主題演講</td><td data-i18n="trk_t2">工作坊 / Lab</td><td data-i18n="trk_t2b">工作坊 / Lab</td><td data-i18n="trk_t4">深度技術 / 圓桌</td><td data-i18n="trk_t5">社群分享</td><td data-i18n="trk_t6">新手 / Demo</td><td class="rest" data-i18n="trk_x1">交流・洽談區</td><td class="rest" data-i18n="trk_x2">休息區</td><td class="rest" data-i18n="trk_x4">講者休息室</td><td class="rest" data-i18n="trk_x3">靜音休息室</td></tr>
-          <tr class="rnd"><td class="tcell">14:00–14:45<small data-i18n="g_b3">第 3 輪</small></td><td data-i18n="trk_t1">技術主題演講</td><td data-i18n="trk_t2">工作坊 / Lab</td><td data-i18n="trk_t2b">工作坊 / Lab</td><td data-i18n="trk_t4">深度技術 / 圓桌</td><td data-i18n="trk_t5">社群分享</td><td data-i18n="trk_t6">新手 / Demo</td><td class="rest" data-i18n="trk_x1">交流・洽談區</td><td class="rest" data-i18n="trk_x2">休息區</td><td class="rest" data-i18n="trk_x4">講者休息室</td><td class="rest" data-i18n="trk_x3">靜音休息室</td></tr>
-          <tr class="rnd"><td class="tcell">15:00–15:45<small data-i18n="g_b4">第 4 輪</small></td><td data-i18n="trk_t1">技術主題演講</td><td data-i18n="trk_t2">工作坊 / Lab</td><td data-i18n="trk_t2b">工作坊 / Lab</td><td data-i18n="trk_t4">深度技術 / 圓桌</td><td data-i18n="trk_t5">社群分享</td><td data-i18n="trk_t6">新手 / Demo</td><td class="rest" data-i18n="trk_x1">交流・洽談區</td><td class="rest" data-i18n="trk_x2">休息區</td><td class="rest" data-i18n="trk_x4">講者休息室</td><td class="rest" data-i18n="trk_x3">靜音休息室</td></tr>
-          <tr class="rnd"><td class="tcell">16:00–16:45<small data-i18n="g_b5">第 5 輪</small></td><td data-i18n="trk_t1">技術主題演講</td><td data-i18n="trk_t2">工作坊 / Lab</td><td data-i18n="trk_t2b">工作坊 / Lab</td><td data-i18n="trk_t4">深度技術 / 圓桌</td><td data-i18n="trk_t5">社群分享</td><td data-i18n="trk_t6">新手 / Demo</td><td class="rest" data-i18n="trk_x1">交流・洽談區</td><td class="rest" data-i18n="trk_x2">休息區</td><td class="rest" data-i18n="trk_x4">講者休息室</td><td class="rest" data-i18n="trk_x3">靜音休息室</td></tr>
-          <tr><td class="tcell">16:45–17:30</td><td class="span" colspan="10" data-i18n="g_end">自由交流・賦歸・17:30 結束所有活動</td></tr>
-        </tbody>
-        <tfoot>
-          <tr><td data-i18n="g_cap">同時容納</td><td colspan="10" data-i18n="g_capv">分軌 6 軌合計約 1,460 席 ＞ 預估 1,000，餘裕充足；另含 4 間交流／休息空間</td></tr>
-        </tfoot>
-      </table>
-    </div>
+function setLang(l){
+  const d = I18N_CHOOSE[l] || I18N_CHOOSE.en;
+  document.documentElement.lang = (l==='zh'?'zh-Hant':l);
+  document.querySelectorAll('[data-i18n]').forEach(e=>{const k=e.getAttribute('data-i18n'); if(d[k]!==undefined) e.textContent=d[k];});
+  document.querySelectorAll('[data-i18n-html]').forEach(e=>{const k=e.getAttribute('data-i18n-html'); if(d[k]!==undefined) e.innerHTML=d[k];});
+  document.querySelectorAll('.langbtn').forEach(b=>b.classList.toggle('active', b.dataset.l===l));
+  try{localStorage.setItem('forumLang',l);}catch(e){}
+}
+// 啟動：沿用先前選擇的語言偏好；首次造訪（或先前偏好為本頁未支援語言，如內頁的 ko）時預設英文。
+(function(){
+  let l='en';
+  try{l=localStorage.getItem('forumLang')||'en';}catch(e){}
+  if(!I18N_CHOOSE[l]) l='en';
+  setLang(l);
+})();
 
-    <div class="note" data-i18n-html="rest_note"><b>🛋️ 休息區規劃：</b>建議於 3F 大廳落地窗區、貴賓休息室與東西側走廊段設置休息／洽談區與咖啡補給站，供分軌轉場（每輪間 10–15 分）與午間交流使用；302e／303e 可作備援軌或安靜休息室。</div>
-  </div>
-</section>
-
-<!-- TRAVEL -->
-<section id="travel" style="background:#F4ECDD">
-  <div class="wrap">
-    <span class="sec-tag" data-i18n="tr_tag">Travel &amp; Stay</span>
-    <h2 data-i18n="tr_h2">交通與住宿</h2>
-
-    <div class="geo">
-      <h3 data-i18n="geo_h">📍 高雄在哪裡？</h3>
-      <p data-i18n="geo_d">高雄是台灣第二大城、位於台灣本島最南端的港灣城市，是南台灣的經濟與航運中心。坐擁台灣最大的國際商港與高雄國際機場，氣候全年溫暖、冬季尤其陽光充足，自亞洲多數主要城市均有直飛或便捷轉乘。</p>
-      <div class="geofacts">
-        <span><b data-i18n="geo_f1">台灣第二大城</b></span>
-        <span><b data-i18n="geo_f2">台灣南部・港都</b></span>
-        <span><b data-i18n="geo_f3">距台北高鐵約 1.5–2 小時</b></span>
-        <span><b data-i18n="geo_f4">冬季溫暖晴朗</b></span>
-        <span>🌡️ <b data-i18n="geo_f5">12 月均溫約 19–27°C</b></span>
-      </div>
-    </div>
-
-    <p class="sec-intro" data-i18n="tr_intro">與會者來自台灣、新加坡、日本、美國、韓國等地。場地位於高雄市前鎮區成功二路 39 號，緊鄰機場、高鐵、捷運與輕軌，國際與會者抵達便利。</p>
-
-    <div class="map-frame">
-      <iframe src="https://www.google.com/maps?q=Kaohsiung+Exhibition+Center&output=embed"
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kaohsiung Exhibition Center"></iframe>
-    </div>
-    <p style="text-align:center;margin:14px 0 40px">
-      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Kaohsiung+Exhibition+Center" target="_blank" rel="noopener" data-i18n="tr_btn">在 Google 地圖開啟 ↗</a>
-    </p>
-
-    <h3 style="font-size:18px;margin-bottom:16px" data-i18n="tr_transport_h">交通方式</h3>
-    <div class="grid g3" style="margin-bottom:18px">
-      <div class="card"><div class="ico">✈️</div><h3 data-i18n="tr_t1t">高雄國際機場 (KHH)</h3><p data-i18n="tr_t1d">高雄小港機場搭捷運紅線直達三多商圈站，全程約 15–20 分鐘。新加坡、日本、韓國等有直飛航班。</p></div>
-      <div class="card"><div class="ico">🌏</div><h3 data-i18n="tr_t2t">國際線轉乘</h3><p data-i18n="tr_t2d">美國等長程線可經台北桃園 (TPE) 轉高鐵南下（約 1.5–2 小時），或經香港／東京轉機直飛高雄。</p></div>
-      <div class="card"><div class="ico">🚄</div><h3 data-i18n="tr_t3t">高鐵 HSR</h3><p data-i18n="tr_t3d">高鐵「左營站」轉捷運紅線至 R8 三多商圈站，或計程車約 20–25 分鐘抵達。</p></div>
-      <div class="card"><div class="ico">🚇</div><h3 data-i18n="tr_t4t">捷運 MRT</h3><p data-i18n="tr_t4d">捷運紅線 R8 三多商圈站，2 號出口沿新光路／成功路步行約 10–15 分鐘。</p></div>
-      <div class="card"><div class="ico">🚊</div><h3 data-i18n="tr_t5t">輕軌 LRT</h3><p data-i18n="tr_t5d">環狀輕軌 C8 高雄展覽館站，下車即達、步行約 7 分鐘，最靠近場館。</p></div>
-      <div class="card"><div class="ico">🅿️</div><h3 data-i18n="tr_t6t">停車 Parking</h3><p data-i18n="tr_t6d">場館設地下停車場約 400 席，建議多搭乘大眾運輸。</p></div>
-    </div>
-
-    <h3 style="font-size:18px;margin:30px 0 16px" data-i18n="tr_hotel_h">鄰近住宿</h3>
-    <div class="grid g3">
-      <div class="card"><h3 data-i18n="tr_h1t">洲際酒店 InterContinental Kaohsiung</h3><p><span class="pill main">5★</span> <span data-i18n="tr_h1d">步行約 10 分鐘，館內米其林鐵板燒，房型寬敞，適合貴賓與講者。約 NT$7,000 起／晚。</span></p></div>
-      <div class="card"><h3 data-i18n="tr_h2t">和逸飯店 Hotel COZZI 中山館</h3><p><span class="pill mid" data-i18n="pill_biz">商務</span> <span data-i18n="tr_h2d">三多商圈，步行約 13 分鐘，機能便利。約 NT$4,000 起／晚。</span></p></div>
-      <div class="card"><h3 data-i18n="tr_h3t">晶英國際行館 Silks Club</h3><p><span class="pill main">5★</span> <span data-i18n="tr_h3d">鄰近軟體園區與輕軌，精品設計旅館，適合團體包棟與接待。</span></p></div>
-      <div class="card"><h3 data-i18n="tr_h4t">經濟型 · 三多商圈一帶</h3><p><span class="pill small" data-i18n="pill_budget">平價</span> <span data-i18n="tr_h4d">三多商圈與中山路沿線多家平價旅宿，步行 10–15 分鐘，房價親民。</span></p></div>
-      <div class="card"><h3 data-i18n="tr_h5t">真愛碼頭 · 港邊一帶</h3><p><span class="pill mid" data-i18n="pill_view">景觀</span> <span data-i18n="tr_h5d">鄰近新光碼頭、大遠百，餐飲購物便利，適合海外與會者順遊。</span></p></div>
-      <div class="card"><h3 data-i18n="tr_h6t">訂房建議</h3><p data-i18n="tr_h6d">大會於 12 月旺季舉行，建議官方提供 1–2 間特約飯店與專屬訂房連結，並預留團體房。</p></div>
-    </div>
-    <div class="note" data-i18n-html="tr_note"><b>提醒：</b>飯店價位與步行時間為網路公開資料整理之概估，實際以各飯店官網為準；建議活動定案後與場館鄰近飯店洽談團體優惠。</div>
-  </div>
-</section>
-
-<!-- TIMELINE -->
-<section id="timeline">
-  <div class="wrap">
-    <span class="sec-tag" data-i18n="tl_tag">Roadmap</span>
-    <h2 data-i18n="tl_h2">活動籌備時程</h2>
-    <p class="sec-intro" data-i18n="tl_intro">從規劃、徵稿到正式登場的關鍵里程碑（2026 年）。日期為建議規劃，確認後可再調整。</p>
-    <div class="timeline">
-      <div class="tl-item" data-date="2026-06-22">
-        <div class="tl-dot">📋</div>
-        <div class="tl-body">
-          <div class="tl-month" data-i18n="tl1_m">2026/6/22 起</div>
-          <div class="tl-title" data-i18n="tl1_t">活動規劃</div>
-          <div class="tl-desc" data-i18n="tl1_d">場地、議程架構、贊助與預算籌備。</div>
-        </div>
-      </div>
-      <div class="tl-seg" style="flex-grow:71"></div>
-      <div class="tl-item" data-date="2026-09-01">
-        <div class="tl-dot">📝</div>
-        <div class="tl-body">
-          <div class="tl-month" data-i18n="tl2_m">2026/9/1</div>
-          <div class="tl-title" data-i18n="tl2_t">Call for Papers 開放</div>
-          <div class="tl-desc" data-i18n="tl2_d">公開徵求議題與講者投稿。</div>
-        </div>
-      </div>
-      <div class="tl-seg" style="flex-grow:27"></div>
-      <div class="tl-item" data-date="2026-09-28">
-        <div class="tl-dot">🎟️</div>
-        <div class="tl-body">
-          <div class="tl-month" data-i18n="tl3_m">2026/9/28</div>
-          <div class="tl-title" data-i18n="tl3_t">開放報名</div>
-          <div class="tl-desc" data-i18n="tl3_d">與會者線上報名啟動。</div>
-        </div>
-      </div>
-      <div class="tl-seg" style="flex-grow:21"></div>
-      <div class="tl-item" data-date="2026-10-19">
-        <div class="tl-dot">🔍</div>
-        <div class="tl-body">
-          <div class="tl-month" data-i18n="tl4_m">2026/10/12–10/31</div>
-          <div class="tl-title" data-i18n="tl4_t">講者審查與通知</div>
-          <div class="tl-desc" data-i18n="tl4_d">審稿、邀請並確認入選講者。</div>
-        </div>
-      </div>
-      <div class="tl-seg" style="flex-grow:21"></div>
-      <div class="tl-item" data-date="2026-11-09">
-        <div class="tl-dot">📣</div>
-        <div class="tl-body">
-          <div class="tl-month" data-i18n="tl5_m">2026/11/9</div>
-          <div class="tl-title" data-i18n="tl5_t">正式公佈</div>
-          <div class="tl-desc" data-i18n="tl5_d">議程與講者陣容正式公告。</div>
-        </div>
-      </div>
-      <div class="tl-seg" style="flex-grow:33"></div>
-      <div class="tl-item hl" data-date="2026-12-12">
-        <div class="tl-dot">🎉</div>
-        <div class="tl-body">
-          <div class="tl-month" data-i18n="tl6_m">2026/12/12（六）</div>
-          <div class="tl-title" data-i18n="tl6_t">大會正式登場</div>
-          <div class="tl-desc" data-i18n="tl6_d">高雄展覽館 3F，1,000 人開發者大會。</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- NEXT -->
-<section id="next">
-  <div class="wrap">
-    <span class="sec-tag" data-i18n="nx_tag">Next steps</span>
-    <h2 data-i18n="nx_h2">下一步</h2>
-    <div class="grid g2">
-      <div class="card"><div class="ico">📅</div><h3 data-i18n="nx_c1t">1. 確認日期</h3><p data-i18n="nx_c1d">確認 2026/12/12（六）檔期，向場地索取正式（含稅）報價。</p></div>
-      <div class="card"><div class="ico">📐</div><h3 data-i18n="nx_c2t">2. 敲定房型</h3><p data-i18n="nx_c2d">依官方決議採方案 A（多軌）或方案 B（單一主場）。</p></div>
-    </div>
-    <div class="note" data-i18n-html="nx_note"><b>備註：</b>本頁費用為依現有資料整理之估算，僅供內部評估與提案討論，非正式報價。實際金額以高雄展覽館正式回覆為準。</div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <b data-i18n="ft_line1">Claude Builder Day 2026 · 高雄場地提案</b><br>
-    <span data-i18n="ft_line2">高雄展覽館 3F ｜ 目標 1,000 人 ｜ 2026/12/12（六）</span><br>
-    <span style="opacity:.6" data-i18n="ft_line3">資料整理：提案用途・費用為含稅估算</span>
-  </div>
-</footer>
-
-<script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
+// 倒數計時器：距離活動開幕（2026/12/5 09:00 高雄當地時間）。
+(function(){
+  const target=new Date('2026-12-05T09:00:00+08:00').getTime();
+  const D=document.getElementById('cdD'),H=document.getElementById('cdH'),M=document.getElementById('cdM'),S=document.getElementById('cdS');
+  if(!D) return;
+  const p2=n=>String(n).padStart(2,'0');
+  function tick(){
+    const diff=target-Date.now();
+    if(diff<=0){D.textContent=H.textContent=M.textContent=S.textContent='00';return;}
+    const s=Math.floor(diff/1000);
+    D.textContent=Math.floor(s/86400);
+    H.textContent=p2(Math.floor(s%86400/3600));
+    M.textContent=p2(Math.floor(s%3600/60));
+    S.textContent=p2(s%60);
+  }
+  tick(); setInterval(tick,1000);
+})();
+</script>
 
 </body>
 </html>

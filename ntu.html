@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1A1714">
+<title>Ship with Claude 2026 · 台大博雅教學館 場地提案</title>
+<meta name="description" content="Ship with Claude 2026 台大博雅教學館候選場地規劃提案：空間、設備、費用方案與交通位置。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="icon" type="image/x-icon" href="images/claude-favicon.ico">
+<link rel="icon" type="image/png" href="images/claude-icon.png">
+<link rel="apple-touch-icon" href="images/claude-icon.png">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* 博雅版 hero 背景（圖檔放入後自動套用；不存在時回退到 .hero 漸層） */
+  .hero-bg{background-image:url('images/ntu/00-hero-ntu.jpg')}
+</style>
+</head>
+<body>
+
+<nav class="topnav" id="top">
+  <div class="wrap topnav-inner">
+    <a class="brand" href="#top">Ship with Claude</a>
+    <div class="navlinks" id="navlinks">
+      <a href="#why" data-i18n="toc1">為何選此場地</a>
+      <a href="#spaces" data-i18n="toc2">空間介紹</a>
+      <a href="#facility" data-i18n="toc3">設備總覽</a>
+      <a href="#cost" data-i18n="toc4">費用方案</a>
+      <a href="#travel" data-i18n="toc6">交通與位置</a>
+      <a class="venue-choose" href="index.html" data-i18n="venue_choose">← 選擇活動形式</a>
+      <a class="venue-alt" href="kaohsiung.html" data-i18n="venue_alt">其他候選場地：高雄展覽館 ↗</a>
+    </div>
+    <div class="langbar">
+      <button class="langbtn" data-l="zh" onclick="setLang('zh')"><span class="lg-full">繁中</span><span class="lg-mini">繁</span></button>
+      <button class="langbtn" data-l="en" onclick="setLang('en')"><span class="lg-full">EN</span><span class="lg-mini">EN</span></button>
+      <button class="langbtn" data-l="ja" onclick="setLang('ja')"><span class="lg-full">日本語</span><span class="lg-mini">日</span></button>
+      <button class="langbtn" data-l="ko" onclick="setLang('ko')"><span class="lg-full">한국어</span><span class="lg-mini">한</span></button>
+    </div>
+    <button class="navtoggle" id="navToggle" aria-label="開啟選單" aria-controls="navlinks" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="eyebrow">場地提案 · Venue Proposal</span>
+    <h1 data-i18n-html="h1">Ship with Claude 2026<br><span>台大博雅教學館</span> 場地規劃提案</h1>
+    <p class="lead" data-i18n="lead">為 2026/12/5（週六）、預估 1,000 人規模的 Ship with Claude，提案以台大博雅教學館作為候選場地。</p>
+    <div class="countdown" id="countdown" aria-live="polite">
+      <span class="cd-label" data-i18n="cd_label">距離活動開幕還有</span>
+      <div class="cd-units">
+        <div class="cd-unit"><b id="cdD">--</b><small data-i18n="cd_d">天</small></div>
+        <div class="cd-unit"><b id="cdH">--</b><small data-i18n="cd_h">時</small></div>
+        <div class="cd-unit"><b id="cdM">--</b><small data-i18n="cd_m">分</small></div>
+        <div class="cd-unit"><b id="cdS">--</b><small data-i18n="cd_s">秒</small></div>
+      </div>
+    </div>
+    <div class="facts">
+      <div class="fact"><b data-i18n="f1v">1,000 人</b><small data-i18n="f1l">目標與會規模</small></div>
+      <div class="fact"><b data-i18n="f2v">2026/12/5（六）</b><small data-i18n="f2l">活動日期</small></div>
+      <div class="fact"><b data-i18n="f3v">台北</b><small data-i18n="f3l">台大博雅教學館</small></div>
+      <div class="fact"><b data-i18n="f4v">1 天</b><small data-i18n="f4l">兩個時段（上午＋下午）</small></div>
+    </div>
+    <nav class="toc">
+      <a href="#why" data-i18n="toc1">為何選此場地</a>
+      <a href="#spaces" data-i18n="toc2">空間介紹</a>
+      <a href="#facility" data-i18n="toc3">設備總覽</a>
+      <a href="#cost" data-i18n="toc4">費用方案</a>
+      <a href="#travel" data-i18n="toc6">交通與位置</a>
+    </nav>
+  </div>
+</header>
+
+<!-- WHY -->
+<section id="why">
+  <div class="wrap">
+    <span class="sec-tag" data-i18n="why_tag">Why this venue</span>
+    <h2 data-i18n="why_h2">為什麼選台大博雅教學館</h2>
+    <p class="sec-intro" data-i18n="why_intro">頂尖學府的校園品牌與學生開發者社群、整棟可彈性分流的多間教室、台北最友善的交通，並以「主場直播＋多室同步轉播」突破單廳座位上限，容納千人開發者大會。</p>
+    <div class="grid g3">
+      <div class="card"><div class="ico">🎓</div><h3 data-i18n="why_c1t">頂尖學府品牌</h3><p data-i18n="why_c1d">台大校總區舉辦，連結全台最大的學生開發者社群與產學能量，對技術品牌與人才招募極具吸引力。</p></div>
+      <div class="card"><div class="ico">📡</div><h3 data-i18n="why_c2t">主場直播＋多室轉播</h3><p data-i18n="why_c2d">博雅101 華南講堂（400 席）主場直播，102／103 與 201／202／301／302 階梯講堂同步轉播，合計 1,583 席，容納全體 1,000 人開閉幕。</p></div>
+      <div class="card"><div class="ico">🧩</div><h3 data-i18n="why_c3t">整棟多軌可分流</h3><p data-i18n="why_c3d">同棟 7 間階梯講堂與十多間平面教室，分軌時段全開，可同時跑 7 軌議程與工作坊。</p></div>
+      <div class="card"><div class="ico">🚇</div><h3 data-i18n="why_c4t">台北交通最友善</h3><p data-i18n="why_c4d">捷運公館站步行 8–10 分，台北車站約 20 分、桃機經機捷約 50 分，對國際講者與外縣市與會者最便利。</p></div>
+      <div class="card"><div class="ico">🌳</div><h3 data-i18n="why_c5t">校園綠意與醉月湖</h3><p data-i18n="why_c5d">緊鄰醉月湖與垂葉榕道，與普通教學館空橋連通，交流散步的天然亮點，校園氛圍獨具特色。</p></div>
+      <div class="card"><div class="ico">💰</div><h3 data-i18n="why_c6t">學界場地・成本親民</h3><p data-i18n="why_c6d">教學空間租金遠低於商業展館，省下的預算可挪去茶點、紀念品與體驗，提升與會者感受。</p></div>
+      <div class="card" style="border:2px solid var(--accent)"><div class="ico">🏅</div><h3 data-i18n="why_c7t">同場地實證・DevFest Taipei</h3><p data-i18n="why_c7d">大型開發者大會 DevFest Taipei 即在博雅 101 舉辦，千人級活動已實際在此場地成功運作——「主場直播＋多教室分流」的模式經過驗證，不只是紙上規劃。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPACES -->
+<section id="spaces" style="background:#F4ECDD">
+  <div class="wrap">
+    <span class="sec-tag" data-i18n="sp_tag">Spaces</span>
+    <h2 data-i18n="sp_h2">空間介紹</h2>
+    <p class="sec-intro" data-i18n="sp_intro">以下為博雅教學館與校園實景照片，搭配各空間用途建議；室內細部配置以實際場勘為準。</p>
+
+    <div class="grid g2" style="margin-bottom:22px">
+      <figure>
+        <img class="ph" src="images/ntu/03-boya101-full.jpg" alt="博雅101 滿場實況" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph3">博雅 101 主場・滿場實況</b><code>images/ntu/03-boya101-full.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap3"><b>博雅 101 主場・滿場實況</b>　大型開發者大會 DevFest Taipei 即在博雅 101 舉辦，階梯講堂滿座；本提案以「101 主場＋多教室同步轉播」容納全體 1,000 人。</figcaption>
+      </figure>
+      <figure>
+        <img class="ph" src="images/ntu/01-ext-east.jpg" alt="博雅教學館外觀" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph1">博雅教學館・外觀</b><code>images/ntu/01-ext-east.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap1"><b>博雅教學館（外觀）</b>　2012 啟用的現代清水模建築，地上 5 層、地下 1 層，鄰近捷運公館站，作為大會主場直播的所在。</figcaption>
+      </figure>
+    </div>
+
+    <div class="grid g3" style="margin-bottom:22px">
+      <figure>
+        <img class="ph" src="images/ntu/02-entrance-gate.jpg" alt="博雅教學館大門" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph2">主入口・大門</b><code>images/ntu/02-entrance-gate.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap2"><b>主入口大門</b>　開放式中庭與多向入口，報到、迎賓與人流疏散順暢，校園步行即達。</figcaption>
+      </figure>
+      <figure>
+        <img class="ph" src="images/ntu/04-skybridge.jpg" alt="空橋" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph4">空橋・連通普通教學館</b><code>images/ntu/04-skybridge.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap4"><b>空橋・連通普通教學館</b>　與鄰棟空橋相連，必要時可擴充更多教室作分軌，動線不離室內。</figcaption>
+      </figure>
+      <figure>
+        <img class="ph" src="images/ntu/05-campus-view.jpg" alt="校園遠望" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph5">校園・綠意遠望</b><code>images/ntu/05-campus-view.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap5"><b>校園・綠意遠望</b>　自博雅館遠望物理館與天文數學館，校園綠意盎然，適合交流散步與合影。</figcaption>
+      </figure>
+    </div>
+
+    <div class="grid g3">
+      <figure>
+        <img class="ph" src="images/ntu/06-bike.jpg" alt="B1 自行車停車" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph6">B1・自行車停車</b><code>images/ntu/06-bike.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap6"><b>地下一樓・自行車停車</b>　約 750 個自行車位，鼓勵綠色運具到場，並設電梯與無障礙動線。</figcaption>
+      </figure>
+      <figure>
+        <img class="ph" src="images/ntu/07-entrance-plaza.jpg" alt="入口廣場" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph7">入口廣場・報到動線</b><code>images/ntu/07-entrance-plaza.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap7"><b>主入口廣場・報到動線</b>　入口廣場開闊，適合設置報到區、指標與品牌背板，串連室內外動線。</figcaption>
+      </figure>
+      <figure>
+        <img class="ph" src="images/ntu/08-campus-lake.jpg" alt="醉月湖校園" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="photo-slot"><span class="pin">📷</span><b data-i18n="sp_ph8">醉月湖・校園外景</b><code>images/ntu/08-campus-lake.jpg</code></div>
+        <figcaption data-i18n-html="sp_cap8"><b>醉月湖・校園外景</b>　博雅館旁的醉月湖與垂葉榕道，綠意盎然，交流散步與合影的天然亮點。</figcaption>
+      </figure>
+    </div>
+
+    <p style="font-size:12px;color:var(--ink-soft);margin-top:18px;text-align:right" data-i18n="sp_credit">照片來源：Wikimedia Commons（CC BY-SA），作者 Bighornedowl、B01401122、Solomon203、Peacearth、FireFeather、Howard61313；提案參考用途。</p>
+  </div>
+</section>
+
+<!-- FACILITY -->
+<section id="facility">
+  <div class="wrap">
+    <span class="sec-tag" data-i18n="fa_tag">Facilities</span>
+    <h2 data-i18n="fa_h2">設備總覽</h2>
+    <p class="sec-intro" data-i18n="fa_intro">各教室皆內建以下基本設備；直播轉播訊號設備、額外燈光音響可外租或自備（仍以場地正式報價與規範為準）。</p>
+    <div class="grid g3">
+      <div class="card"><div class="ico">📶</div><h3 data-i18n="fa_net_t">網路（需自備）</h3><p data-i18n="fa_net_d">依台大收費標準表，本場地不對外提供公眾無線網路（租用視聽設備者另附一台教學用電腦可上網）。千人活動建議自備行動網路／MiFi 或臨時無線基地台，並與校方另議。</p></div>
+      <div class="card"><div class="ico">📺</div><h3 data-i18n="fa_c1t">主場直播・多室轉播</h3><p data-i18n="fa_c1d">博雅101 華南講堂為主場直播，訊號分流至 102／103 等階梯講堂同步轉播，突破單廳座位限制容納千人（直播設備外租或自備）。</p></div>
+      <div class="card"><div class="ico">📽️</div><h3 data-i18n="fa_c2t">投影 / 電視牆</h3><p data-i18n="fa_c2d">各教室固定投影機與布幕，並配 1F 四合一電視牆；博雅101 華南講堂備三投影機，講堂視線清楚。</p></div>
+      <div class="card"><div class="ico">🔊</div><h3 data-i18n="fa_c3t">音響系統</h3><p data-i18n="fa_c3d">主場 101 華南講堂擴音與無線麥克風；各教室固定喇叭，覆蓋階梯講堂空間。</p></div>
+      <div class="card"><div class="ico">🌉</div><h3 data-i18n="fa_c4t">空橋串連・可擴充</h3><p data-i18n="fa_c4d">與普通教學館空橋連通，必要時可再借鄰棟教室擴充軌道，動線不離室內。</p></div>
+      <div class="card"><div class="ico">🪑</div><h3 data-i18n="fa_c5t">階梯課桌・平面教室</h3><p data-i18n="fa_c5d">階梯講堂為固定階梯座位附寫字桌板；平面教室可彈性排桌，兼顧聽講與動手做。</p></div>
+      <div class="card"><div class="ico">♿</div><h3 data-i18n="fa_c6t">電梯與無障礙</h3><p data-i18n="fa_c6d">設電梯與無障礙設施，B1 自行車停車約 750 席，校園周邊另有公有停車場。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COST -->
+<section id="cost" style="background:#F4ECDD">
+  <div class="wrap">
+    <span class="sec-tag" data-i18n="co_tag">Budget</span>
+    <h2 data-i18n="co_h2">費用方案</h2>
+    <p class="sec-intro" data-i18n="co_intro">以下依台大「教學館教室借用管理及設備使用收費標準表」(113.10.01) 與借用系統公開資料整理（全天＝08:00–17:00）。下表「全天費用」為各教室場地清潔費（含水電、垃圾、桌椅、風扇）＋視聽設備費（投影機）＋冷氣空調費的未稅金額；整場另計人事管理費（每館一份 3,000）與博雅1F 電視牆（如用），校外單位再加 5% 稅。</p>
+
+    <h3 style="margin:8px 0 14px;font-size:18px" data-i18n="co_tbl_h">各教室容量與全天費用（含清潔・視聽・冷氣・未稅）</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="co_th1">教室</th>
+            <th data-i18n="co_th2">樓層・型態</th>
+            <th class="num" data-i18n="co_th3">可容納人數</th>
+            <th class="num" data-i18n="co_th4">全天費用（未稅）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>博雅101／華南講堂</td><td>1F <span class="pill main" data-i18n="pl_tiered">階梯講堂</span></td><td class="num">400</td><td class="num">16,400</td></tr>
+          <tr><td>博雅102</td><td>1F <span class="pill main" data-i18n="pl_tiered">階梯講堂</span></td><td class="num">279</td><td class="num">13,500</td></tr>
+          <tr><td>博雅103</td><td>1F <span class="pill main" data-i18n="pl_tiered">階梯講堂</span></td><td class="num">278</td><td class="num">13,700</td></tr>
+          <tr><td>博雅202</td><td>2F <span class="pill main" data-i18n="pl_tiered">階梯講堂</span></td><td class="num">213</td><td class="num">12,250</td></tr>
+          <tr><td>博雅201</td><td>2F <span class="pill main" data-i18n="pl_tiered">階梯講堂</span></td><td class="num">164</td><td class="num">11,950</td></tr>
+          <tr><td>博雅301</td><td>3F <span class="pill main" data-i18n="pl_tiered">階梯講堂</span></td><td class="num">128</td><td class="num">11,950</td></tr>
+          <tr><td>博雅302</td><td>3F <span class="pill main" data-i18n="pl_tiered">階梯講堂</span></td><td class="num">121</td><td class="num">11,950</td></tr>
+          <tr><td>博雅203–206・303–312（14 間）</td><td>2–3F <span class="pill small" data-i18n="pl_flat">平面教室</span></td><td class="num">20–30</td><td class="num">10,750</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td colspan="2" data-i18n="co_tfoot1">7 間階梯講堂合計</td><td class="num" data-i18n="co_tfoot2">1,583 席</td><td class="num">91,700</td></tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div style="margin-top:34px">
+      <div class="plan rec">
+        <span class="badge" data-i18n="planA_badge">★ 建議場地配置（1F 三間階梯講堂・同層相連）</span>
+        <h3 data-i18n="planA_title">博雅 101＋102＋103：主場＋雙轉播</h3>
+        <div class="price" data-i18n="planA_price">957 席・3 間 1F 階梯講堂</div>
+        <div class="price-usd" data-i18n="planA_usd">含稅約 NT$52,080（≈US$1,600・校外全天）</div>
+        <p style="color:var(--ink-soft);font-size:14px" data-i18n="planA_desc">博雅101 華南講堂（400 席）作主場直播，博雅102（279）、博雅103（278）同步轉播——三間皆位於 1 樓、同層相連，合計 957 席，動線最單純，可容納近千人開閉幕與三軌議程。</p>
+        <ul>
+          <li data-i18n="planA_li1">主場：博雅101 華南講堂 400 席（三投影機・電視牆・冷氣）</li>
+          <li data-i18n="planA_li2">轉播／分軌：博雅102（279）・博雅103（278）</li>
+          <li data-i18n="planA_li3">三間全天費用 16,400＋13,500＋13,700 ＝ 43,600；＋人事管理費 3,000＋1F 電視牆 3,000 ＝ 未稅 49,600</li>
+          <li data-i18n-html="planA_li4">校外加 5% 稅 ＝ <b>含稅約 NT$52,080（≈US$1,600）</b></li>
+        </ul>
+        <div class="note" style="margin-top:18px" data-i18n-html="planA_note"><b>說明：</b>費用依台大「教學館教室借用管理及設備使用收費標準表」(113.10.01) 估算，已含冷氣空調（每間每天 3,000；12 月可視天氣調整）；校外單位加收 5% 稅。如需滿 1,000 席或更多分軌，可再加租 2F 博雅202（213，達 1,170 席）或 201／301／302。確切金額與檔期以正式申請為準。</div>
+      </div>
+    </div>
+
+
+    <div class="note" data-i18n-html="co_note"><b>費用說明（依收費標準表 113.10.01）：</b>① 上表「全天費用」＝場地清潔費（含水電、垃圾、桌椅、風扇）＋視聽設備費（單／雙／三投影機 3,000／3,200／3,400 元）＋冷氣空調費（每間 3,000 元・全天）；② 整場另計人事管理費（每館 3,000 元・全天，借 11 間以上或借大講堂加倍）與博雅1F 電視牆 3,000 元/面（如用）；③ 校外單位一律加收 5% 稅；④ 冷氣或視聽多間借用另有八折／七折優惠（詳收費標準表）；⑤ 場地不對外提供公眾無線網路，需自備或與校方另議；⑥ 確切金額與可借檔期以正式申請與台大教務處課務組（02-3366-2388 分機 310；博雅館 02-3366-1486）核定為準。</div>
+  </div>
+</section>
+
+<!-- TRAVEL -->
+<section id="travel" style="background:#F4ECDD">
+  <div class="wrap">
+    <span class="sec-tag" data-i18n="tr_tag">Getting here</span>
+    <h2 data-i18n="tr_h2">交通與位置</h2>
+
+    <div class="geo">
+      <h3 data-i18n="geo_h">📍 台北・台大在哪裡？</h3>
+      <p data-i18n="geo_d">台北是台灣首都與政經文化中心，台灣大學位於市中心大安區，是台灣規模最大、學術聲望最高的綜合大學，校園緊鄰公館商圈與捷運站。台北桃園國際機場有來自亞洲與全球的密集航班，自機場經機場捷運可快速進入市區，國際與會者抵達極為便利。</p>
+      <div class="geofacts">
+        <span><b data-i18n="geo_f1">台灣首都</b></span>
+        <span><b data-i18n="geo_f2">台大・大安區公館</b></span>
+        <span><b data-i18n="geo_f3">捷運公館站步行 8–10 分</b></span>
+        <span><b data-i18n="geo_f4">桃機經機捷約 50 分</b></span>
+        <span>🌡️ <b data-i18n="geo_f5">12 月均溫約 16–22°C</b></span>
+      </div>
+    </div>
+
+    <p class="sec-intro" data-i18n="tr_intro">與會者來自台灣、新加坡、日本、美國、韓國等地。場地位於台北市大安區羅斯福路四段 1 號台大校總區，緊鄰捷運公館站，與台北車站、桃園機場間大眾運輸串連便利。</p>
+
+    <div class="map-frame">
+      <iframe src="https://www.google.com/maps?q=National+Taiwan+University+Boya+Lecture+Building&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="NTU Boya Lecture Building"></iframe>
+    </div>
+    <p style="text-align:center;margin:14px 0 40px">
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=臺灣大學博雅教學館" target="_blank" rel="noopener" data-i18n="tr_btn">在 Google 地圖開啟 ↗</a>
+    </p>
+
+    <h3 style="font-size:18px;margin-bottom:16px" data-i18n="tr_transport_h">交通方式</h3>
+    <div class="grid g3" style="margin-bottom:18px">
+      <div class="card"><div class="ico">🚇</div><h3 data-i18n="tr_t1t">捷運 MRT・公館站</h3><p data-i18n="tr_t1d">捷運松山新店線（綠線）公館站 2 號出口，沿羅斯福路步行約 8–10 分鐘即達校門與博雅館，是最主要的抵達方式。</p></div>
+      <div class="card"><div class="ico">✈️</div><h3 data-i18n="tr_t2t">桃園國際機場 (TPE)</h3><p data-i18n="tr_t2d">國際線主要門戶，搭機場捷運至台北車站約 40 分鐘，轉捷運板南線、松山新店線至公館站，全程約 1 小時。</p></div>
+      <div class="card"><div class="ico">🛬</div><h3 data-i18n="tr_t3t">松山機場 (TSA)</h3><p data-i18n="tr_t3d">台北市區松山機場（日本、上海等航線），搭捷運文湖線轉松山新店線至公館站，約 30–40 分鐘。</p></div>
+      <div class="card"><div class="ico">🚄</div><h3 data-i18n="tr_t4t">高鐵 / 台鐵 台北站</h3><p data-i18n="tr_t4d">高鐵、台鐵「台北站」轉捷運至公館站約 20 分鐘；中南部與會者當日往返便利。</p></div>
+      <div class="card"><div class="ico">🚌</div><h3 data-i18n="tr_t5t">公車 Bus</h3><p data-i18n="tr_t5d">台大、公館站為大型公車轉運點，羅斯福路、新生南路多線公車直達，下車即達校園。</p></div>
+      <div class="card"><div class="ico">🅿️</div><h3 data-i18n="tr_t6t">停車 Parking</h3><p data-i18n="tr_t6d">校內停車有限，B1 自行車位約 750，建議多搭乘捷運與公車；周邊有公有與民營停車場。</p></div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b data-i18n="ft_line1">Ship with Claude 2026 · 台大博雅教學館 場地提案</b><br>
+    <span data-i18n="ft_line2">台大博雅教學館 ｜ 目標 1,000 人 ｜ 2026/12/5（六）</span><br>
+    <span style="opacity:.6" data-i18n="ft_line3">資料整理：提案用途・費用為估算</span><br>
+    <a class="venue-choose-foot" href="index.html" data-i18n="venue_choose">← 選擇活動形式</a>
+    <a class="venue-alt-foot" href="kaohsiung.html" data-i18n="venue_alt">其他候選場地：高雄展覽館 ↗</a>
+  </div>
+</footer>
+
+<script src="js/i18n.ntu.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
